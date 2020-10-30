@@ -1,0 +1,9 @@
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Domain.Interfaces\bin\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Interfaces.deps.json
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Domain.Interfaces\bin\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Interfaces.dll
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Domain.Interfaces\bin\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Interfaces.pdb
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Domain.Interfaces\obj\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Interfaces.csprojAssemblyReference.cache
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Domain.Interfaces\obj\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Interfaces.AssemblyInfoInputs.cache
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Domain.Interfaces\obj\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Interfaces.AssemblyInfo.cs
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Domain.Interfaces\obj\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Domain.Interfaces\obj\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Interfaces.dll
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Domain.Interfaces\obj\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Interfaces.pdb
