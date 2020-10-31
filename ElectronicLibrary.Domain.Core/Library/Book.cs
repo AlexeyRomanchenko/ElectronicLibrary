@@ -12,5 +12,6 @@ namespace ElectronicLibrary.Domain.Core
         public int GenreId { get; set; }
         public Genre Genre { get; set; }
         public string ImagePath { get; set; }
+        public int TotalAmount { get; set; }
     }
 }
