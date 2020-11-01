@@ -1,13 +1,14 @@
 ﻿using ElectronicLibrary.Domain.Core;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ElectronicLibrary.Domain.Interfaces
 {
-    public interface IBookRepository
+    public interface IBookRepository<T>
     {
-        Task GetAllAsync();
-        Task CreateAsync(Book book);
-        Task<Book> GetById(int id);
+        Task<IEnumerable<T>> GetAllAsync();
+        Task CreateAsync(T item);
+        Task<T> GetById(int id);
     }
 }

@@ -22,3 +22,5 @@ C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Infrastructure.Dat
 C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Infrastructure.Data\obj\Debug\netcoreapp3.1\ElectronicLibrary.Infrastructure.Data.dll
 C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Infrastructure.Data\obj\Debug\netcoreapp3.1\ElectronicLibrary.Infrastructure.Data.pdb
 C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Infrastructure.Data\obj\Debug\netcoreapp3.1\ElectronicLibrary.Infrastructure.Data.genruntimeconfig.cache
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Infrastructure.Data\bin\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Interfaces.dll
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Infrastructure.Data\bin\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Interfaces.pdb

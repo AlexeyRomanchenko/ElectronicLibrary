@@ -35,6 +35,26 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Authors");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Firstname = "Jeffrey",
+                            Lastname = "Richter"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Firstname = "Vicktor Marie",
+                            Lastname = "Hugo"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Firstname = "Artur Konan",
+                            Lastname = "Doyle"
+                        });
                 });
 
             modelBuilder.Entity("ElectronicLibrary.Domain.Core.Book", b =>
@@ -69,6 +89,35 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                     b.HasIndex("GenreId");
 
                     b.ToTable("Books");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AuthorId = 1,
+                            GenreId = 1,
+                            Name = ".NET via CLR",
+                            PublishYear = new DateTime(2016, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            TotalAmount = 3
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AuthorId = 3,
+                            GenreId = 3,
+                            Name = "Sherlock Holms",
+                            PublishYear = new DateTime(1860, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            TotalAmount = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AuthorId = 2,
+                            GenreId = 3,
+                            Name = "Outcasts",
+                            PublishYear = new DateTime(1860, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            TotalAmount = 1
+                        });
                 });
 
             modelBuilder.Entity("ElectronicLibrary.Domain.Core.Genre", b =>
@@ -79,12 +128,29 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Name")
-                        .HasColumnType("int");
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Genres");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Programming"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Sci-fi"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Detective"
+                        });
                 });
 
             modelBuilder.Entity("ElectronicLibrary.Domain.Core.Identity.User", b =>
@@ -105,6 +171,9 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                         .HasMaxLength(256);
 
                     b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsEnabled")
                         .HasColumnType("bit");
 
                     b.Property<bool>("LockoutEnabled")
@@ -239,6 +308,22 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "ffcefeea-679c-4b1d-9965-1661cb6cc453",
+                            ConcurrencyStamp = "8364ea85-edaf-4f3d-9d6a-54e2e421e235",
+                            Name = "User",
+                            NormalizedName = "USER"
+                        },
+                        new
+                        {
+                            Id = "a35d8674-8d6b-4c5f-9ceb-0735d0d27292",
+                            ConcurrencyStamp = "5b68ada4-1737-4201-b122-f66fb0143658",
+                            Name = "Moderator",
+                            NormalizedName = "MODERATOR"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -3,5 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ElectronicLibrary.Domain.Core.Identity
 {
     public class User: IdentityUser
-    {}
+    {
+        public bool IsEnabled { get; set; }
+    }
 }

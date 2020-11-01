@@ -13,6 +13,8 @@
     <Compile Remove="Migrations\20201031161053_AddIdentity.Designer.cs" />
     <Compile Remove="Migrations\20201031161245_AddIdentity.cs" />
     <Compile Remove="Migrations\20201031161245_AddIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20201101160134_ChangeGenreTypeAddSeed.cs" />
+    <Compile Remove="Migrations\20201101160134_ChangeGenreTypeAddSeed.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +29,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ElectronicLibrary.Domain.Core\ElectronicLibrary.Domain.Core.csproj" />
+    <ProjectReference Include="..\ElectronicLibrary.Domain.Interfaces\ElectronicLibrary.Domain.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

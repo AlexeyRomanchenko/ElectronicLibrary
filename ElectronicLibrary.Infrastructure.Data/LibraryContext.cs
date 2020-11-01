@@ -30,7 +30,8 @@ namespace ElectronicLibrary.Infrastructure.Data
                 b=>b.Property(e=>e.Status)
                 .HasConversion(b=>b.ToString(),
                 s=>GetStatus(s)));
-            modelBuilder.Entity<Book>().HasOne(e => e.Genre).WithMany(b=>b.Books);
+       
+            //modelBuilder.Entity<Book>().HasOne(e => e.Genre).WithMany(b=>b.Books);
             modelBuilder.Entity<User>().ToTable("Users").Property(p => p.Id).HasColumnName("Id");
             modelBuilder.Entity<IdentityUserRole<string>>().ToTable("UserRoles").HasKey(e => e.UserId);
             modelBuilder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins").HasKey(e => e.UserId);
@@ -39,6 +40,85 @@ namespace ElectronicLibrary.Infrastructure.Data
             modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
             modelBuilder.Entity<IdentityUserToken<string>>().ToTable("UserTokens").HasKey(e => e.UserId);
 
+            modelBuilder.Entity<Genre>().HasKey(e => e.Id);
+            modelBuilder.Entity<IdentityRole>().HasData(
+                new IdentityRole
+                {
+                    Name = "User",
+                    NormalizedName = "USER"
+                },
+                 new IdentityRole
+                 {
+                     Name = "Moderator",
+                     NormalizedName = "MODERATOR"
+                 }
+                );
+            modelBuilder.Entity<Genre>().HasData(
+                new Genre
+                {
+                    Id = 1,
+                    Name = "Programming"
+                },
+                new Genre
+                {
+                    Id = 2,
+                    Name = "Sci-fi"
+                },
+                new Genre
+                {
+                    Id = 3,
+                    Name = "Detective"
+                }
+                );
+            modelBuilder.Entity<Author>().HasData(
+                new Author
+                {
+                    Id = 1,
+                    Firstname = "Jeffrey",
+                    Lastname = "Richter"
+                },
+                new Author
+                {
+                    Id = 2,
+                    Firstname = "Vicktor Marie",
+                    Lastname = "Hugo"
+                },
+                new Author
+                {
+                    Id = 3,
+                    Firstname = "Artur Konan",
+                    Lastname = "Doyle"
+                }
+                );
+            modelBuilder.Entity<Book>().HasData(
+                new Book
+                {
+                Id = 1,
+                AuthorId = 1,
+                GenreId = 1,
+                Name = ".NET via CLR",
+                PublishYear = new DateTime(2016, 1, 1),
+                TotalAmount = 3
+                },
+                new Book
+                {
+                    Id = 2,
+                    AuthorId = 3,
+                    GenreId = 3,
+                    Name = "Sherlock Holms",
+                    PublishYear = new DateTime(1860, 1, 1),
+                    TotalAmount = 2
+                },
+                new Book
+                {
+                    Id = 3,
+                    AuthorId = 2,
+                    GenreId = 3,
+                    Name = "Outcasts",
+                    PublishYear = new DateTime(1860, 1, 1),
+                    TotalAmount = 1
+                }
+                );
 
         }
         private Status GetStatus(string status)

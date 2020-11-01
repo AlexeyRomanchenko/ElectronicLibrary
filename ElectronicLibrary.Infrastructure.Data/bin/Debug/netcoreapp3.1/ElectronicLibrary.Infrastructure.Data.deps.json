@@ -9,6 +9,7 @@
       "ElectronicLibrary.Infrastructure.Data/1.0.0": {
         "dependencies": {
           "ElectronicLibrary.Domain.Core": "1.0.0",
+          "ElectronicLibrary.Domain.Interfaces": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.9",
           "Microsoft.EntityFrameworkCore": "3.1.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9",
@@ -1099,6 +1100,14 @@
         "runtime": {
           "ElectronicLibrary.Domain.Core.dll": {}
         }
+      },
+      "ElectronicLibrary.Domain.Interfaces/1.0.0": {
+        "dependencies": {
+          "ElectronicLibrary.Domain.Core": "1.0.0"
+        },
+        "runtime": {
+          "ElectronicLibrary.Domain.Interfaces.dll": {}
+        }
       }
     }
   },
@@ -1844,6 +1853,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "ElectronicLibrary.Domain.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ElectronicLibrary.Domain.Interfaces/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
