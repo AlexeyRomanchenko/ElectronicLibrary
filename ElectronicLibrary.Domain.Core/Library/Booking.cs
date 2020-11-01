@@ -1,5 +1,6 @@
 ﻿using ElectronicLibrary.Domain.Core.Identity;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace ElectronicLibrary.Domain.Core.Library
 {
@@ -14,6 +15,5 @@ namespace ElectronicLibrary.Domain.Core.Library
         public User User { get; set; }
         public Book Book { get; set; }
         public Status Status { get; set; }
-
     }
 }

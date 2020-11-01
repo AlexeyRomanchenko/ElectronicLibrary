@@ -1,2 +1,2 @@
-import {Card} from './BookCard';
-export {Card};
+import {BookCard} from './BookCard';
+export {BookCard};

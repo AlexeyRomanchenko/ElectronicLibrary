@@ -4,14 +4,16 @@ using ElectronicLibrary.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ElectronicLibrary.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(LibraryContext))]
-    partial class LibraryContextModelSnapshot : ModelSnapshot
+    [Migration("20201101135554_ChangeCommentsTablename")]
+    partial class ChangeCommentsTablename
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -196,6 +198,9 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                     b.Property<int>("BookId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("BookingId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsBlocked")
                         .HasColumnType("bit");
 
@@ -208,6 +213,8 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("BookId");
+
+                    b.HasIndex("BookingId");
 
                     b.HasIndex("UserId");
 
@@ -374,10 +381,14 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
             modelBuilder.Entity("ElectronicLibrary.Domain.Core.Library.Comment", b =>
                 {
                     b.HasOne("ElectronicLibrary.Domain.Core.Book", "Book")
-                        .WithMany("Comments")
+                        .WithMany()
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("ElectronicLibrary.Domain.Core.Library.Booking", null)
+                        .WithMany("Comments")
+                        .HasForeignKey("BookingId");
 
                     b.HasOne("ElectronicLibrary.Domain.Core.Identity.User", "User")
                         .WithMany()

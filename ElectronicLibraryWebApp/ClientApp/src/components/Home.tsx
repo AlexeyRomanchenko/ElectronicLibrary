@@ -1,13 +1,13 @@
-import { Card } from '@material-ui/core';
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { BookCard } from './common/book-card/BookCard';
+import { BookCardList } from './book-card-list';
 
 const Home = () => (
-  <div>
+  <div style={{background: '#F5F8F9'}}>
+  <div style={{ margin: '0 auto', maxWidth:'60rem'}}>
     <h1>Hello, world!</h1>
-    <BookCard/>
-    
+    <BookCardList/>
+    </div>
   </div>
 );
 

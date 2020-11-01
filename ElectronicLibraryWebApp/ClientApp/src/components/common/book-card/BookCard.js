@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -10,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 250,
   },
 });
 
@@ -19,7 +18,6 @@ export const BookCard = () => {
 
   return (
     <Card className={classes.root}>
-
         <CardMedia
           component="img"
           alt="book name"
@@ -28,13 +26,16 @@ export const BookCard = () => {
           title="book name"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography variant="h5" component="h3">
             Lizard
+          </Typography>
+          <Typography component="small">
+            Jeffrey Richter &nbsp;|&nbsp; 2014
           </Typography>
         </CardContent>
       <CardActions>
-        <Button size="small" color="primary">
-          Learn More
+        <Button size="small" variant="outlined" color="primary">
+          Rezerve
         </Button>
       </CardActions>
     </Card>
