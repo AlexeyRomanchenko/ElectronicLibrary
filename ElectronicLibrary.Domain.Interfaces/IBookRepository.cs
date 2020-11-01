@@ -1,6 +1,4 @@
-﻿using ElectronicLibrary.Domain.Core;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ElectronicLibrary.Domain.Interfaces

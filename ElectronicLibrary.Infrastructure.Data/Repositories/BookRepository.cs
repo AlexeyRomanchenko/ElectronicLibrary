@@ -1,7 +1,9 @@
 ﻿using ElectronicLibrary.Domain.Core;
 using ElectronicLibrary.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ElectronicLibrary.Infrastructure.Data.Repositories
@@ -20,12 +22,34 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
 
         public async Task<IEnumerable<Book>> GetAllAsync()
         {
-            return await _context.Books.Include(e=>e.Author).Include(e=>e.Genre).ToListAsync();
+            try
+            {
+                return await _context.Books
+                   .Include(e => e.Author)
+                   .Include(e => e.Genre)
+                   .AsNoTracking()
+                   .ToListAsync();
+            }
+            catch (Exception)
+            {
+                throw;
+            }          
         }
 
-        public Task<Book> GetById(int id)
+        public async Task<Book> GetById(int id)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                return await _context.Books.Where(b => b.Id == id)
+                    .Include(a => a.Author)
+                    .Include(g => g.Genre)
+                    .Include(c => c.Comments)
+                    .AsNoTracking().FirstOrDefaultAsync();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ const useStyles = makeStyles({
   },
 });
 
-export const BookCard = () => {
+export const BookCard = ({book}) => {
   const classes = useStyles();
 
   return (
@@ -27,11 +27,14 @@ export const BookCard = () => {
         />
         <CardContent>
           <Typography variant="h5" component="h3">
-            Lizard
+            {book.name}
+          </Typography>
+          <Typography component="p">
+            By {book.author.firstname} {book.author.lastname}
           </Typography>
           <Typography component="small">
-            Jeffrey Richter &nbsp;|&nbsp; 2014
-          </Typography>
+          Release year: 2016
+        </Typography>
         </CardContent>
       <CardActions>
         <Button size="small" variant="outlined" color="primary">
