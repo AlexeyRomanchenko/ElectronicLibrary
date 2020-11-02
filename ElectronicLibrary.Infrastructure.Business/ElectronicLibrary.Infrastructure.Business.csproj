@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EletronicLibrary.Services.Interfaces\EletronicLibrary.Services.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -30,6 +30,7 @@ namespace ElectronicLibraryWebApp
         {
             services.AddControllersWithViews();
             services.AddDependencies();
+            services.AddAuth();
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -56,6 +57,9 @@ namespace ElectronicLibraryWebApp
             app.UseSpaStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

@@ -4,6 +4,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import styles from './NavMenu.module.css';
+import { Link } from 'react-router-dom';
 
 export const NavMenu = () => {
         return (
@@ -14,7 +15,7 @@ export const NavMenu = () => {
                 Electronic Library
               </Typography>
               <div className={styles.btn__wrapper}>
-                <Button color="inherit">Login</Button>
+                <Link to="/signin">Login</Link>
               </div>
             </Toolbar>
           </AppBar>
