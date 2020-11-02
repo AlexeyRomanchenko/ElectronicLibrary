@@ -27,11 +27,11 @@ namespace ElectronicLibraryWebApp.Controllers.Account
             _jwtHelper = jwtHelper;
         }
 
-        [HttpGet]
         [Authorize]
+        [HttpGet]
         public string Get()
         {
-            return "authorized";
+            return $"you loginned {User.Identity.Name}";
         }
         // POST api/<SigninController>
         [HttpPost]
