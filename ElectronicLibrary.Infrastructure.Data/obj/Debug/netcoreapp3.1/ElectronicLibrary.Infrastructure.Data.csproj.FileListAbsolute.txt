@@ -24,3 +24,11 @@ C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Infrastructure.Dat
 C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Infrastructure.Data\obj\Debug\netcoreapp3.1\ElectronicLibrary.Infrastructure.Data.genruntimeconfig.cache
 C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Infrastructure.Data\bin\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Interfaces.dll
 C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Infrastructure.Data\bin\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Interfaces.pdb
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Infrastructure.Data\bin\Debug\netcoreapp3.1\ElectronicLibrary.Infrastructure.Data.runtimeconfig.json
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Infrastructure.Data\bin\Debug\netcoreapp3.1\ElectronicLibrary.Infrastructure.Data.runtimeconfig.dev.json
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Infrastructure.Data\bin\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Core.dll
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Infrastructure.Data\bin\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Interfaces.dll
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Infrastructure.Data\bin\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Core.pdb
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Infrastructure.Data\bin\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Interfaces.pdb
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Infrastructure.Data\obj\Debug\netcoreapp3.1\ElectronicLibrary.Infrastructure.Data.csproj.CopyComplete
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Infrastructure.Data\obj\Debug\netcoreapp3.1\ElectronicLibrary.Infrastructure.Data.genruntimeconfig.cache

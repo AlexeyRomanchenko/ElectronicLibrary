@@ -3,6 +3,7 @@ using ElectronicLibrary.Domain.Core.Identity;
 using ElectronicLibrary.Domain.Interfaces;
 using ElectronicLibrary.Infrastructure.Data;
 using ElectronicLibrary.Infrastructure.Data.Repositories;
+using ElectronicLibraryWebApp.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,11 +29,7 @@ namespace ElectronicLibraryWebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<LibraryContext>();
-
-            services.AddIdentity<User, IdentityRole>()
-                .AddEntityFrameworkStores<LibraryContext>();
-            services.AddTransient<IBookRepository<Book>, BookRepository>();
+            services.AddDependencies();
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {

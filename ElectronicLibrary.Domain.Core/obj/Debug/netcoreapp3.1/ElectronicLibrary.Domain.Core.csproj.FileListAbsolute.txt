@@ -15,3 +15,4 @@ C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Domain.Core\bin\De
 C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Domain.Core\obj\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Core.dll
 C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Domain.Core\obj\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Core.pdb
 C:\Users\Tom\Source\Repos\ElectronicLibrary\ElectronicLibrary.Domain.Core\obj\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Core.csprojAssemblyReference.cache
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Domain.Core\obj\Debug\netcoreapp3.1\ElectronicLibrary.Domain.Core.csprojAssemblyReference.cache
