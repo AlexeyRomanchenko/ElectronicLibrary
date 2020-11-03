@@ -21,7 +21,8 @@ namespace ElectronicLibraryWebApp.Extensions
 
             services.AddTransient<JWTHelper>();
             services.AddIdentity<User, IdentityRole>()
-                .AddEntityFrameworkStores<LibraryContext>();
+                .AddEntityFrameworkStores<LibraryContext>()
+                .AddDefaultTokenProviders();
             
             
             services.AddTransient<IBookRepository<Book>, BookRepository>();
