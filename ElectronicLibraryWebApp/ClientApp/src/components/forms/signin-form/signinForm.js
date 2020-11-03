@@ -1,5 +1,7 @@
+import { Button } from "@material-ui/core";
 import React from "react";
 import { useForm } from "react-hook-form";
+import TextField from '@material-ui/core/TextField';
 
 export const SignInForm = () => {
   const { register, handleSubmit, watch, errors } = useForm();
@@ -9,11 +11,11 @@ export const SignInForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input name="username" defaultValue="test" ref={register} />
-      <input name="password" ref={register({ required: true })} />
+      <TextField name="username" label="Outlined" variant="outlined" inputRef={register({ required: true })}/>
+      <TextField name="parrword" label="Outlined" variant="outlined" inputRef={register({ required: true })}/>
       {errors.password && <span>This field is required</span>}
       
-      <input type="submit" />
+      <Button type="submit" variant="contained" color="primary">Sign in</Button>
     </form>
   );
 }
