@@ -41,8 +41,8 @@ namespace ElectronicLibraryWebApp.Controllers.Account
                     var result = await _userManager.CreateAsync(user, model.Password);
                     if(result.Succeeded)
                     {
-                       // _roleManager
-                        var claims = _jwtHelper.GenerateIdentity(model.Username, "Admin");
+                        await _userManager.AddToRoleAsync(user, "user");
+                        var claims = _jwtHelper.GenerateIdentity(model.Username, "user");
                         string encodedJwt = _jwtHelper.GenerateToken(claims);
                         var response = new
                         {
