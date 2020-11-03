@@ -16,8 +16,12 @@
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\e-library\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\e-library\**" />
+    <EmbeddedResource Remove="ClientApp\e-library\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\e-library\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 

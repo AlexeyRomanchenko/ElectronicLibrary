@@ -21,6 +21,7 @@ namespace ElectronicLibraryWebApp.Extensions
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<LibraryContext>();
             
+            
             services.AddTransient<IBookRepository<Book>, BookRepository>();
         }
     }

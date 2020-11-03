@@ -1,6 +1,8 @@
 ﻿using ElectronicLibraryWebApp.Helpers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
+using System.Threading.Tasks;
+
 namespace ElectronicLibraryWebApp.Extensions
 {
     public static class AuthExtensions
@@ -23,6 +25,14 @@ namespace ElectronicLibraryWebApp.Extensions
                         ValidateIssuerSigningKey = true
                     };
                 });
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.Events.OnRedirectToLogin = context =>
+                {
+                    context.Response.StatusCode = 401;
+                    return Task.CompletedTask;
+                };
+            });
         }
     }
 }
