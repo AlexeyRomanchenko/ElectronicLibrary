@@ -17,6 +17,8 @@ namespace ElectronicLibraryWebApp.Extensions
 
             services.AddTransient<UserManager<User>>();
             services.AddTransient<SignInManager<User>>();
+            services.AddTransient<RoleManager<IdentityRole>>();
+
             services.AddTransient<JWTHelper>();
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<LibraryContext>();

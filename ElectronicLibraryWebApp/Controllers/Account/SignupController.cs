@@ -13,10 +13,16 @@ namespace ElectronicLibraryWebApp.Controllers.Account
     public class SignupController : ControllerBase
     {
         private UserManager<User> _userManager;
+        private RoleManager<IdentityRole> _roleManager;
         private JWTHelper _jwtHelper;
-        public SignupController(UserManager<User> userManager, JWTHelper jwtHelper)
+        public SignupController(
+            UserManager<User> userManager, 
+            JWTHelper jwtHelper,
+            RoleManager<IdentityRole> roleManager
+            )
         {
             _userManager = userManager;
+            _roleManager = roleManager;
             _jwtHelper = jwtHelper;
         }
         // POST api/<SignupController>
@@ -35,6 +41,7 @@ namespace ElectronicLibraryWebApp.Controllers.Account
                     var result = await _userManager.CreateAsync(user, model.Password);
                     if(result.Succeeded)
                     {
+                       // _roleManager
                         var claims = _jwtHelper.GenerateIdentity(model.Username, "Admin");
                         string encodedJwt = _jwtHelper.GenerateToken(claims);
                         var response = new
