@@ -1,0 +1,9 @@
+C:\Users\Tom\Source\Repos\ElectronicLibrary\ElectronicLibrary.Services.Models\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.deps.json
+C:\Users\Tom\Source\Repos\ElectronicLibrary\ElectronicLibrary.Services.Models\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.dll
+C:\Users\Tom\Source\Repos\ElectronicLibrary\ElectronicLibrary.Services.Models\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.pdb
+C:\Users\Tom\Source\Repos\ElectronicLibrary\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.csprojAssemblyReference.cache
+C:\Users\Tom\Source\Repos\ElectronicLibrary\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.AssemblyInfoInputs.cache
+C:\Users\Tom\Source\Repos\ElectronicLibrary\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.AssemblyInfo.cs
+C:\Users\Tom\Source\Repos\ElectronicLibrary\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.csproj.CoreCompileInputs.cache
+C:\Users\Tom\Source\Repos\ElectronicLibrary\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.dll
+C:\Users\Tom\Source\Repos\ElectronicLibrary\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.pdb

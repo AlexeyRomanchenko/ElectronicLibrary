@@ -10,19 +10,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.9" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.7" />
   </ItemGroup>
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\e-library\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\e-library\**" />
+    <EmbeddedResource Remove="ClientApp\e-library\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\e-library\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ElectronicLibrary.Domain.Interfaces\ElectronicLibrary.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\ElectronicLibrary.Infrastructure.Business\ElectronicLibrary.Infrastructure.Business.csproj" />
     <ProjectReference Include="..\ElectronicLibrary.Infrastructure.Data\ElectronicLibrary.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\EletronicLibrary.Services.Interfaces\ElectronicLibrary.Services.Interfaces.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

@@ -2,4 +2,10 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/ElectronicLibraryWebApp/DesignTimeBuild/.dtbcache.v2
+/.vs
+/ElectronicLibrary.Domain.Core\obj
+/ElectronicLibrary.Domain.Interfaces\obj
+/ElectronicLibrary.Infrastructure.Business\obj
+/ElectronicLibrary.Infrastructure.Data\obj
+/ElectronicLibrary.Services.Interfaces\obj
+/ElectronicLibraryWebApp\obj

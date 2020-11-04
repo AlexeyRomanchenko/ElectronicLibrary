@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using ElectronicLibrary.Domain.Core.Identity;
+using ElectronicLibraryWebApp.Helpers;
+using ElectronicLibraryWebApp.ViewModels;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace ElectronicLibraryWebApp.Controllers.Account
 {
@@ -12,10 +12,52 @@ namespace ElectronicLibraryWebApp.Controllers.Account
     [ApiController]
     public class SignupController : ControllerBase
     {
+        private UserManager<User> _userManager;
+        private RoleManager<IdentityRole> _roleManager;
+        private JWTHelper _jwtHelper;
+        public SignupController(
+            UserManager<User> userManager, 
+            JWTHelper jwtHelper,
+            RoleManager<IdentityRole> roleManager
+            )
+        {
+            _userManager = userManager;
+            _roleManager = roleManager;
+            _jwtHelper = jwtHelper;
+        }
         // POST api/<SignupController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> Post([FromForm]RegisterViewModel model)
         {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    User user = new User
+                    {
+                        Email = model.Username,
+                        UserName = model.Username
+                    };
+                    var result = await _userManager.CreateAsync(user, model.Password);
+                    if(result.Succeeded)
+                    {
+
+                        await _userManager.AddToRoleAsync(user, "User");
+                        string encodedJwt = _jwtHelper.GenerateToken(model.Username, "User");
+                        var response = new
+                        {
+                            access_token = encodedJwt,
+                            username = model.Username
+                        };
+                        return Ok(response);
+                    }
+                }
+                throw new ArgumentException("Register model is not valid");
+            }
+            catch (Exception exception)
+            {
+                return BadRequest(exception.Message);
+            }
         }
 
     }

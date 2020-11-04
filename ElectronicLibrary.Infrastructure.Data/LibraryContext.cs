@@ -39,8 +39,12 @@ namespace ElectronicLibrary.Infrastructure.Data
             modelBuilder.Entity<IdentityRole>().ToTable("Roles");
             modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
             modelBuilder.Entity<IdentityUserToken<string>>().ToTable("UserTokens").HasKey(e => e.UserId);
-
+            modelBuilder.Entity<IdentityUserRole<string>>(b =>
+            {
+                b.HasKey(i => new { i.UserId, i.RoleId });
+            });
             modelBuilder.Entity<Genre>().HasKey(e => e.Id);
+           
             modelBuilder.Entity<IdentityRole>().HasData(
                 new IdentityRole
                 {
@@ -93,12 +97,12 @@ namespace ElectronicLibrary.Infrastructure.Data
             modelBuilder.Entity<Book>().HasData(
                 new Book
                 {
-                Id = 1,
-                AuthorId = 1,
-                GenreId = 1,
-                Name = ".NET via CLR",
-                PublishYear = new DateTime(2016, 1, 1),
-                TotalAmount = 3
+                    Id = 1,
+                    AuthorId = 1,
+                    GenreId = 1,
+                    Name = ".NET via CLR",
+                    PublishYear = new DateTime(2016, 1, 1),
+                    TotalAmount = 3
                 },
                 new Book
                 {
@@ -119,7 +123,6 @@ namespace ElectronicLibrary.Infrastructure.Data
                     TotalAmount = 1
                 }
                 );
-
         }
         private Status GetStatus(string status)
         {

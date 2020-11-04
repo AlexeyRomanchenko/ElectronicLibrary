@@ -1,0 +1,14 @@
+.logo {
+  color: #ffffff;
+  text-decoration: none;
+}
+.btn__wrapper {
+  margin-left: auto;
+}
+.btn__wrapper a {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}

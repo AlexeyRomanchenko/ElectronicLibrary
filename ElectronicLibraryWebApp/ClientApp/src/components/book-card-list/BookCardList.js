@@ -8,8 +8,7 @@ export const BookCardList = () => {
     useEffect(()=> {
         axios.get('/api/book')
         .then(response=> {
-            const books = response.data;  
-            console.log(books);
+            const books = response.data;
             setBooks(books); 
         }).catch(err=>{
             console.log(err);

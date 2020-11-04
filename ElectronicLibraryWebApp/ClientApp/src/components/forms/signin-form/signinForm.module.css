@@ -1,0 +1,13 @@
+.form {
+  width: 20rem;
+}
+.form__input {
+  width: 100%;
+}
+.form__field__wrapper {
+  margin-bottom: 1rem;
+}
+.form__btn {
+  width: 100%;
+  display: block;
+}

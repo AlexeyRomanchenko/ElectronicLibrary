@@ -1,0 +1,12 @@
+C:\Users\Tom\Source\Repos\ElectronicLibrary\EletronicLibrary.Services.Interfaces\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Interfaces.deps.json
+C:\Users\Tom\Source\Repos\ElectronicLibrary\EletronicLibrary.Services.Interfaces\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Interfaces.dll
+C:\Users\Tom\Source\Repos\ElectronicLibrary\EletronicLibrary.Services.Interfaces\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Interfaces.pdb
+C:\Users\Tom\Source\Repos\ElectronicLibrary\EletronicLibrary.Services.Interfaces\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.dll
+C:\Users\Tom\Source\Repos\ElectronicLibrary\EletronicLibrary.Services.Interfaces\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.pdb
+C:\Users\Tom\Source\Repos\ElectronicLibrary\EletronicLibrary.Services.Interfaces\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Interfaces.csprojAssemblyReference.cache
+C:\Users\Tom\Source\Repos\ElectronicLibrary\EletronicLibrary.Services.Interfaces\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Interfaces.AssemblyInfoInputs.cache
+C:\Users\Tom\Source\Repos\ElectronicLibrary\EletronicLibrary.Services.Interfaces\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Interfaces.AssemblyInfo.cs
+C:\Users\Tom\Source\Repos\ElectronicLibrary\EletronicLibrary.Services.Interfaces\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Tom\Source\Repos\ElectronicLibrary\EletronicLibrary.Services.Interfaces\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Interfaces.csproj.CopyComplete
+C:\Users\Tom\Source\Repos\ElectronicLibrary\EletronicLibrary.Services.Interfaces\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Interfaces.dll
+C:\Users\Tom\Source\Repos\ElectronicLibrary\EletronicLibrary.Services.Interfaces\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Interfaces.pdb

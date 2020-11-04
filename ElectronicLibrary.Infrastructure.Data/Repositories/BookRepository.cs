@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ElectronicLibrary.Infrastructure.Data.Repositories
 {
-    public class BookRepository : IBookRepository<Book>
+    public class BookRepository : IRepository<Book>
     {
         public LibraryContext _context;
         public BookRepository(LibraryContext context)
@@ -36,7 +36,7 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
             }          
         }
 
-        public async Task<Book> GetById(int id)
+        public async Task<Book> GetByIdAsync(int id)
         {
             try
             {
