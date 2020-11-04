@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m7OLj2BUbwXbJHSdVELnn0TyGLXKBF1pEH9VKi+W4S1+JLu713d3Xy94B8kSA9VBr+g3GfqE8dgQsJPVXteKuw==",
+  "dgSpecHash": "H0PMl/rWiqrr9mMChAFMK8x8uDmtji0hI3CDCEVtqdoJz68sr4kKYR+3pJu75lYkUnt2AvToJmU8fHCk1JkKpQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Business\\ElectronicLibrary.Infrastructure.Business.csproj",
+  "projectFilePath": "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Infrastructure.Business\\ElectronicLibrary.Infrastructure.Business.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
