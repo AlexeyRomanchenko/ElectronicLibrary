@@ -34,11 +34,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\ElectronicLibrary.Services.Interfaces.csproj",
+      "projectUniqueName": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\ElectronicLibrary.Services.Interfaces.csproj",
       "projectName": "ElectronicLibrary.Services.Interfaces",
-      "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\ElectronicLibrary.Services.Interfaces.csproj",
+      "projectPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\ElectronicLibrary.Services.Interfaces.csproj",
       "packagesPath": "C:\\Users\\Tom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\obj\\",
+      "outputPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -60,8 +60,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj": {
-              "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj"
+            "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj": {
+              "projectPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj"
             }
           }
         }

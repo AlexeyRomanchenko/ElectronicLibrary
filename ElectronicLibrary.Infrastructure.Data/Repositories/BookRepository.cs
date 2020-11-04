@@ -15,9 +15,9 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
         {
             _context = context;
         }
-        public Task CreateAsync(Book book)
+        public async Task CreateAsync(Book book)
         {
-            throw new System.NotImplementedException();
+           await _context.Books.AddAsync(book);
         }
 
         public async Task<IEnumerable<Book>> GetAllAsync()
@@ -45,6 +45,18 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                     .Include(g => g.Genre)
                     .Include(c => c.Comments)
                     .AsNoTracking().FirstOrDefaultAsync();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task SaveAsync()
+        {
+            try
+            {
+                await _context.SaveChangesAsync();
             }
             catch (Exception)
             {

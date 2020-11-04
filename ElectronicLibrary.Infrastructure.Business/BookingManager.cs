@@ -14,7 +14,7 @@ namespace ElectronicLibrary.Infrastructure.Business
         {
             _repository = repository;
         }
-        public async Task<bool> Reserve(BookingModel model)
+        public async Task<bool> ReserveAsync(BookingModel model)
         {
             try
             {
@@ -22,9 +22,12 @@ namespace ElectronicLibrary.Infrastructure.Business
                 {
                     Status = Status.Booking,
                     BookingDate = DateTime.UtcNow,
-                    IssueDate = DateTime.UtcNow.AddDays(2)
+                    IssueDate = DateTime.UtcNow.AddDays(2),
+                    BookId = model._bookId,
+                    UserId = model._userId
                 };
                 await _repository.CreateAsync(booking);
+                await _repository.SaveAsync();
                 return true;
             }
             catch (Exception)
@@ -34,7 +37,7 @@ namespace ElectronicLibrary.Infrastructure.Business
             
         }
 
-        public Task<bool> Take()
+        public Task<bool> TakeAsync()
         {
             throw new NotImplementedException();
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Business\\ElectronicLibrary.Infrastructure.Business.csproj": {}
+    "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Business\\ElectronicLibrary.Infrastructure.Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj": {
+    "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj",
         "projectName": "ElectronicLibrary.Domain.Core",
-        "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj",
+        "projectPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj",
         "packagesPath": "C:\\Users\\Tom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\obj\\",
+        "outputPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -68,14 +68,14 @@
         }
       }
     },
-    "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj": {
+    "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj",
+        "projectUniqueName": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj",
         "projectName": "ElectronicLibrary.Domain.Interfaces",
-        "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj",
+        "projectPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj",
         "packagesPath": "C:\\Users\\Tom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\obj\\",
+        "outputPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -97,8 +97,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj": {
-                "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj"
+              "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj"
               }
             }
           }
@@ -130,14 +130,14 @@
         }
       }
     },
-    "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Business\\ElectronicLibrary.Infrastructure.Business.csproj": {
+    "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Business\\ElectronicLibrary.Infrastructure.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Business\\ElectronicLibrary.Infrastructure.Business.csproj",
+        "projectUniqueName": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Business\\ElectronicLibrary.Infrastructure.Business.csproj",
         "projectName": "ElectronicLibrary.Infrastructure.Business",
-        "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Business\\ElectronicLibrary.Infrastructure.Business.csproj",
+        "projectPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Business\\ElectronicLibrary.Infrastructure.Business.csproj",
         "packagesPath": "C:\\Users\\Tom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Business\\obj\\",
+        "outputPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -159,14 +159,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj": {
-                "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj"
+              "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj"
               },
-              "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj": {
-                "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj"
+              "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj": {
+                "projectPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj"
               },
-              "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\ElectronicLibrary.Services.Interfaces.csproj": {
-                "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\ElectronicLibrary.Services.Interfaces.csproj"
+              "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\ElectronicLibrary.Services.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\ElectronicLibrary.Services.Interfaces.csproj"
               }
             }
           }
@@ -198,14 +198,14 @@
         }
       }
     },
-    "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj": {
+    "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj",
         "projectName": "ElectronicLibrary.Services.Models",
-        "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj",
+        "projectPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj",
         "packagesPath": "C:\\Users\\Tom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\obj\\",
+        "outputPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -256,14 +256,14 @@
         }
       }
     },
-    "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\ElectronicLibrary.Services.Interfaces.csproj": {
+    "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\ElectronicLibrary.Services.Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\ElectronicLibrary.Services.Interfaces.csproj",
+        "projectUniqueName": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\ElectronicLibrary.Services.Interfaces.csproj",
         "projectName": "ElectronicLibrary.Services.Interfaces",
-        "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\ElectronicLibrary.Services.Interfaces.csproj",
+        "projectPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\ElectronicLibrary.Services.Interfaces.csproj",
         "packagesPath": "C:\\Users\\Tom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\obj\\",
+        "outputPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -285,8 +285,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj": {
-                "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj"
+              "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj": {
+                "projectPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj"
               }
             }
           }

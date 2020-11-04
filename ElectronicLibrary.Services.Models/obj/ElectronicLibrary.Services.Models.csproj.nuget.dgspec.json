@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj": {}
+    "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj": {
+    "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj",
         "projectName": "ElectronicLibrary.Services.Models",
-        "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj",
+        "projectPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\ElectronicLibrary.Services.Models.csproj",
         "packagesPath": "C:\\Users\\Tom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\obj\\",
+        "outputPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Services.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

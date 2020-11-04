@@ -5867,11 +5867,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Data\\ElectronicLibrary.Infrastructure.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Data\\ElectronicLibrary.Infrastructure.Data.csproj",
       "projectName": "ElectronicLibrary.Infrastructure.Data",
-      "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Data\\ElectronicLibrary.Infrastructure.Data.csproj",
+      "projectPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Data\\ElectronicLibrary.Infrastructure.Data.csproj",
       "packagesPath": "C:\\Users\\Tom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Data\\obj\\",
+      "outputPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -5893,11 +5893,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj": {
-              "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj"
+            "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj": {
+              "projectPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj"
             },
-            "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj": {
-              "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj"
+            "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj"
             }
           }
         }
