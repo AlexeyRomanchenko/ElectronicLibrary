@@ -36,7 +36,7 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
             }          
         }
 
-        public async Task<Book> GetById(int id)
+        public async Task<Book> GetByIdAsync(int id)
         {
             try
             {

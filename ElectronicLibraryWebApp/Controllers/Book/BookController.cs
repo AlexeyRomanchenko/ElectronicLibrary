@@ -21,7 +21,8 @@ namespace ElectronicLibraryWebApp.Controllers
         {
             try
             {
-                return Ok(await _bookRepository.GetAllAsync());
+                var books = await _bookRepository.GetAllAsync();
+                return Ok(books);
             }
             catch (Exception ex)
             {
@@ -32,9 +33,21 @@ namespace ElectronicLibraryWebApp.Controllers
 
         // GET api/<BookController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return "value";
+            try
+            {
+                if (id > 0)
+                {
+                    var book = await _bookRepository.GetByIdAsync(id);
+                    return Ok(book);
+                }
+                throw new ArgumentException("Invalid parameter");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         // POST api/<BookController>

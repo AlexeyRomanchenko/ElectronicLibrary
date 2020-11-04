@@ -30,6 +30,7 @@ export const Header = () => {
           </Typography>
           <div className={styles.btn__wrapper}>
           <Link to="/signin">Login</Link>
+          <Link to="/signup">Register</Link>
         </div>
         </Toolbar>
       </AppBar>

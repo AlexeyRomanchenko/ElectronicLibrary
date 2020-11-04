@@ -7,6 +7,6 @@ namespace ElectronicLibrary.Domain.Interfaces
     {
         Task<IEnumerable<T>> GetAllAsync();
         Task CreateAsync(T item);
-        Task<T> GetById(int id);
+        Task<T> GetByIdAsync(int id);
     }
 }

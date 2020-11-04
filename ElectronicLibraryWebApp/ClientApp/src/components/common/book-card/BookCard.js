@@ -6,10 +6,12 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
+import styles from './BookCard.module.css';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 250,
+    width: 300,
   },
 });
 
@@ -27,7 +29,7 @@ export const BookCard = ({book}) => {
         />
         <CardContent>
           <Typography variant="h5" component="h3">
-            {book.name}
+            <Link className={styles.card__book_name} to={`book/${book.id}`}>{book.name}</Link>
           </Typography>
           <Typography component="p">
             By {book.author.firstname} {book.author.lastname}
