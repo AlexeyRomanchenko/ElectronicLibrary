@@ -46,16 +46,24 @@ namespace ElectronicLibraryWebApp.Controllers.Account
                     var result = await _signInManager.PasswordSignInAsync(model.Username, model.Password, false, false);
                     if (result.Succeeded)
                     {
-                        var user = await _userManager.FindByNameAsync(model.Username);
+                        User user = await _userManager.FindByNameAsync(model.Username);
                         IList<string> roles = await _userManager.GetRolesAsync(user);
                         string role = roles.FirstOrDefault();
-                        string encodedJwt = _jwtHelper.GenerateToken(model.Username, role);
-                        var response = new
+                        if (user.IsEnabled)
                         {
-                            access_token = encodedJwt,
-                            username = model.Username
-                        };
-                        return Ok(response);
+                            string encodedJwt = _jwtHelper.GenerateToken(model.Username, role);
+                            var response = new
+                            {
+                                access_token = encodedJwt,
+                                username = model.Username
+                            };
+                            return Ok(response);
+                        }
+                        else
+                        {
+                            return StatusCode(403);
+                        }
+
                     }
                     return Unauthorized();
                 }
