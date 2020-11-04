@@ -10,8 +10,8 @@ namespace ElectronicLibraryWebApp.Controllers
     [ApiController]
     public class BookController : ControllerBase
     {
-        private IBookRepository<Book> _bookRepository;
-        public BookController(IBookRepository<Book> bookRepository)
+        private IRepository<Book> _bookRepository;
+        public BookController(IRepository<Book> bookRepository)
         {
             _bookRepository = bookRepository;
         }

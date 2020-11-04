@@ -173,7 +173,7 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsEnabled")
+                    b.Property<bool>("IsBlocked")
                         .HasColumnType("bit");
 
                     b.Property<bool>("LockoutEnabled")
@@ -312,15 +312,15 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "ffcefeea-679c-4b1d-9965-1661cb6cc453",
-                            ConcurrencyStamp = "8364ea85-edaf-4f3d-9d6a-54e2e421e235",
+                            Id = "57248d3b-94a6-4dee-9fbd-d87b6a5578a2",
+                            ConcurrencyStamp = "66f119fe-1b0c-4eda-9b07-8aacfea06b79",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "a35d8674-8d6b-4c5f-9ceb-0735d0d27292",
-                            ConcurrencyStamp = "5b68ada4-1737-4201-b122-f66fb0143658",
+                            Id = "fb005787-d24e-4e0c-9b92-4ed7dee7fdba",
+                            ConcurrencyStamp = "37b20ca5-054c-496f-8ed2-ef13703ebbe0",
                             Name = "Moderator",
                             NormalizedName = "MODERATOR"
                         });
@@ -399,10 +399,9 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("RoleId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("UserId");
+                    b.HasKey("UserId", "RoleId");
 
                     b.HasIndex("RoleId");
 
@@ -437,7 +436,7 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("ElectronicLibrary.Domain.Core.Genre", "Genre")
-                        .WithMany("Books")
+                        .WithMany()
                         .HasForeignKey("GenreId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

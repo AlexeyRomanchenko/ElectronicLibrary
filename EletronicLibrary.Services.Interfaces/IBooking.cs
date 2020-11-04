@@ -1,10 +1,11 @@
-﻿using System.Threading.Tasks;
+﻿using ElectronicLibrary.Services.Models;
+using System.Threading.Tasks;
 
-namespace EletronicLibrary.Services.Interfaces
+namespace ElectronicLibrary.Services.Interfaces
 {
     public interface IBooking
     {
-        Task<bool> Reserve();
+        Task<bool> Reserve(BookingModel model);
         Task<bool> Take(); 
     }
 }

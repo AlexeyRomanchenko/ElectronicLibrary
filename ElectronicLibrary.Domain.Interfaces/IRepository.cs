@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace ElectronicLibrary.Domain.Interfaces
 {
-    public interface IBookRepository<T>
+    public interface IRepository<T>
     {
         Task<IEnumerable<T>> GetAllAsync();
         Task CreateAsync(T item);

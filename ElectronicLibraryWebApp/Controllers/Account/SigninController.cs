@@ -49,7 +49,7 @@ namespace ElectronicLibraryWebApp.Controllers.Account
                         User user = await _userManager.FindByNameAsync(model.Username);
                         IList<string> roles = await _userManager.GetRolesAsync(user);
                         string role = roles.FirstOrDefault();
-                        if (user.IsEnabled)
+                        if (user.IsBlocked)
                         {
                             string encodedJwt = _jwtHelper.GenerateToken(model.Username, role);
                             var response = new

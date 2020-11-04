@@ -3,6 +3,6 @@ namespace ElectronicLibrary.Domain.Core.Identity
 {
     public class User: IdentityUser
     {
-        public bool IsEnabled { get; set; }
+        public bool IsBlocked { get; set; }
     }
 }

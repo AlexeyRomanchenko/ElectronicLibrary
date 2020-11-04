@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ElectronicLibrary.Infrastructure.Data.Repositories
 {
-    public class BookRepository : IBookRepository<Book>
+    public class BookRepository : IRepository<Book>
     {
         public LibraryContext _context;
         public BookRepository(LibraryContext context)

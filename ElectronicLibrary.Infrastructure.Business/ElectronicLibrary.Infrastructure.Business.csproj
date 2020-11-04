@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EletronicLibrary.Services.Interfaces\EletronicLibrary.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\ElectronicLibrary.Domain.Interfaces\ElectronicLibrary.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\ElectronicLibrary.Services.Models\ElectronicLibrary.Services.Models.csproj" />
+    <ProjectReference Include="..\EletronicLibrary.Services.Interfaces\ElectronicLibrary.Services.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

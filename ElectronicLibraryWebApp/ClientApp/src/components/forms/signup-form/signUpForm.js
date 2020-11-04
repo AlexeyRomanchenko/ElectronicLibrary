@@ -6,7 +6,12 @@ import TextField from '@material-ui/core/TextField';
 
 export const SignUpForm = () => {
  const { register, handleSubmit, errors } = useForm();
-  const onSubmit = data => console.log(data);
+  const onSubmit = data => {
+    let formData = new FormData();
+    formData.append('key1', 'value1');
+    formData.append('key2', 'value2');
+    console.log(formData, data);
+  };
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
       <div className={styles.form__field__wrapper}>

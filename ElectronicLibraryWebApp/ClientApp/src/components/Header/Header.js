@@ -26,7 +26,7 @@ export const Header = () => {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            News
+            <Link className={styles.logo} to="/">E-Library</Link>
           </Typography>
           <div className={styles.btn__wrapper}>
           <Link to="/signin">Login</Link>
