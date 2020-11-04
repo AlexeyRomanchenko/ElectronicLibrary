@@ -16,3 +16,6 @@ C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Infrastr
 C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Infrastructure.Business\obj\Debug\netcoreapp3.1\ElectronicLibrary.Infrastructure.Business.csproj.CoreCompileInputs.cache
 C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Infrastructure.Business\obj\Debug\netcoreapp3.1\ElectronicLibrary.Infrastructure.Business.dll
 C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Infrastructure.Business\obj\Debug\netcoreapp3.1\ElectronicLibrary.Infrastructure.Business.pdb
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Infrastructure.Business\bin\Debug\netcoreapp3.1\EletronicLibrary.Services.Interfaces.dll
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Infrastructure.Business\bin\Debug\netcoreapp3.1\EletronicLibrary.Services.Interfaces.pdb
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Infrastructure.Business\obj\Debug\netcoreapp3.1\ElectronicLibrary.Infrastructure.Business.csproj.CopyComplete

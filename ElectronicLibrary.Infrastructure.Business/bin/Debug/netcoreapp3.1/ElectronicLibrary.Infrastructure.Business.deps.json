@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "ElectronicLibrary.Infrastructure.Business/1.0.0": {
+        "dependencies": {
+          "EletronicLibrary.Services.Interfaces": "1.0.0"
+        },
         "runtime": {
           "ElectronicLibrary.Infrastructure.Business.dll": {}
+        }
+      },
+      "EletronicLibrary.Services.Interfaces/1.0.0": {
+        "runtime": {
+          "EletronicLibrary.Services.Interfaces.dll": {}
         }
       }
     }
   },
   "libraries": {
     "ElectronicLibrary.Infrastructure.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EletronicLibrary.Services.Interfaces/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using ElectronicLibrary.Domain.Core.Identity;
 using ElectronicLibraryWebApp.Helpers;
@@ -27,7 +29,7 @@ namespace ElectronicLibraryWebApp.Controllers.Account
             _jwtHelper = jwtHelper;
         }
 
-        [Authorize]
+        [Authorize(Roles ="User")]
         [HttpGet]
         public string Get()
         {
@@ -44,8 +46,10 @@ namespace ElectronicLibraryWebApp.Controllers.Account
                     var result = await _signInManager.PasswordSignInAsync(model.Username, model.Password, false, false);
                     if (result.Succeeded)
                     {
-                        var claims = _jwtHelper.GenerateIdentity(model.Username, "Admin");
-                        string encodedJwt = _jwtHelper.GenerateToken(claims);
+                        var user = await _userManager.FindByNameAsync(model.Username);
+                        IList<string> roles = await _userManager.GetRolesAsync(user);
+                        string role = roles.FirstOrDefault();
+                        string encodedJwt = _jwtHelper.GenerateToken(model.Username, role);
                         var response = new
                         {
                             access_token = encodedJwt,

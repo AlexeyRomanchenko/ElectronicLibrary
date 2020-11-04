@@ -1,14 +1,6 @@
-using ElectronicLibrary.Domain.Core;
-using ElectronicLibrary.Domain.Core.Identity;
-using ElectronicLibrary.Domain.Interfaces;
-using ElectronicLibrary.Infrastructure.Data;
-using ElectronicLibrary.Infrastructure.Data.Repositories;
 using ElectronicLibraryWebApp.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
