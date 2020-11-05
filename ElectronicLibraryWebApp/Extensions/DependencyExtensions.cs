@@ -30,6 +30,7 @@ namespace ElectronicLibraryWebApp.Extensions
             
             services.AddTransient<IRepository<Book>, BookRepository>();
             services.AddTransient<IRepository<Booking>, BookingRepository>();
+            services.AddTransient<ICommentRepository<Comment>, CommentsRepository>();
             services.AddTransient<IBooking, BookingManager>();
         }
     }
