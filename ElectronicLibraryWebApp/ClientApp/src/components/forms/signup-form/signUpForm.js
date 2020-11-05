@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import { Button } from "@material-ui/core";
 import styles from './signUpForm.module.css';
 import { useForm } from "react-hook-form";
@@ -8,9 +9,17 @@ export const SignUpForm = () => {
  const { register, handleSubmit, errors } = useForm();
   const onSubmit = data => {
     let formData = new FormData();
-    formData.append('key1', 'value1');
-    formData.append('key2', 'value2');
-    console.log(formData, data);
+    for(let key in data) {
+      formData.append(key, data[key]);
+    }
+    axios({
+      method: 'POST',
+      url: '/api/signup',
+      data: formData,
+      headers: new Headers(
+        {'Content-Type': 'application/x-www-form-urlencoded'}
+      )
+    });
   };
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>

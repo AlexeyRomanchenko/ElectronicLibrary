@@ -1,34 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Data\\ElectronicLibrary.Infrastructure.Data.csproj": {}
+    "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Infrastructure.Data\\ElectronicLibrary.Infrastructure.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj": {
+    "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj",
+        "projectUniqueName": "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj",
         "projectName": "ElectronicLibrary.Domain.Core",
-        "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj",
-        "packagesPath": "C:\\Users\\Tom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\obj\\",
+        "projectPath": "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj",
+        "packagesPath": "C:\\Users\\131_RAV\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Domain.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Tom\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\131_RAV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nugetized.blob.core.windows.net/live-reload/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -64,41 +61,38 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj": {
+    "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj",
+        "projectUniqueName": "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj",
         "projectName": "ElectronicLibrary.Domain.Interfaces",
-        "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj",
-        "packagesPath": "C:\\Users\\Tom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\obj\\",
+        "projectPath": "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj",
+        "packagesPath": "C:\\Users\\131_RAV\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Domain.Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Tom\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\131_RAV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nugetized.blob.core.windows.net/live-reload/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj": {
-                "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj"
+              "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj"
               }
             }
           }
@@ -126,44 +120,41 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Data\\ElectronicLibrary.Infrastructure.Data.csproj": {
+    "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Infrastructure.Data\\ElectronicLibrary.Infrastructure.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Data\\ElectronicLibrary.Infrastructure.Data.csproj",
+        "projectUniqueName": "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Infrastructure.Data\\ElectronicLibrary.Infrastructure.Data.csproj",
         "projectName": "ElectronicLibrary.Infrastructure.Data",
-        "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Data\\ElectronicLibrary.Infrastructure.Data.csproj",
-        "packagesPath": "C:\\Users\\Tom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Infrastructure.Data\\obj\\",
+        "projectPath": "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Infrastructure.Data\\ElectronicLibrary.Infrastructure.Data.csproj",
+        "packagesPath": "C:\\Users\\131_RAV\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Infrastructure.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Tom\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\131_RAV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nugetized.blob.core.windows.net/live-reload/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj": {
-                "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj"
+              "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Domain.Core\\ElectronicLibrary.Domain.Core.csproj"
               },
-              "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj": {
-                "projectPath": "C:\\Users\\Tom\\Source\\Repos\\ElectronicLibrary\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj"
+              "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\ElectronicLibrary.Domain.Interfaces\\ElectronicLibrary.Domain.Interfaces.csproj"
               }
             }
           }
@@ -211,7 +202,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

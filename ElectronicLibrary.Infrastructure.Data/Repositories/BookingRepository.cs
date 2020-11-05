@@ -62,5 +62,9 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                 throw;
             }
         }
+        public async Task SaveAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
     }
 }

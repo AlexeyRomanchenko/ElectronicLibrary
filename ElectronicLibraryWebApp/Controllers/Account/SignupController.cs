@@ -51,6 +51,7 @@ namespace ElectronicLibraryWebApp.Controllers.Account
                         };
                         return Ok(response);
                     }
+                   //throw result.Errors[0].
                 }
                 throw new ArgumentException("Register model is not valid");
             }

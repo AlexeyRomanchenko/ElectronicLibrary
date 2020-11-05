@@ -5,7 +5,7 @@ namespace ElectronicLibrary.Services.Interfaces
 {
     public interface IBooking
     {
-        Task<bool> Reserve(BookingModel model);
-        Task<bool> Take(); 
+        Task<bool> ReserveAsync(BookingModel model);
+        Task<bool> TakeAsync(); 
     }
 }
