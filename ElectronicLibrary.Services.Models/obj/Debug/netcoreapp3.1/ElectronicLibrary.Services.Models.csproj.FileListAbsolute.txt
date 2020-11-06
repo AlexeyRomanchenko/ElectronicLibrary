@@ -1,7 +1,6 @@
 C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Services.Models\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.deps.json
 C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Services.Models\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.dll
 C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Services.Models\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.pdb
-C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.csprojAssemblyReference.cache
 C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.AssemblyInfoInputs.cache
 C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.AssemblyInfo.cs
 C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.csproj.CoreCompileInputs.cache

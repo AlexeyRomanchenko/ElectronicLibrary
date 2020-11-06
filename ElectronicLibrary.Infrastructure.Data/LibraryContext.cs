@@ -99,6 +99,7 @@ namespace ElectronicLibrary.Infrastructure.Data
                 {
                     Id = 1,
                     AuthorId = 1,
+                    ImagePath = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fairytale-old-vintage-book-cover-template-design-5ff0b48b07be66f694dcd67101cefa12_screen.jpg?ts=1566579743",
                     GenreId = 1,
                     Name = ".NET via CLR",
                     PublishYear = new DateTime(2016, 1, 1),
@@ -108,6 +109,7 @@ namespace ElectronicLibrary.Infrastructure.Data
                 {
                     Id = 2,
                     AuthorId = 3,
+                    ImagePath = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fairytale-old-vintage-book-cover-template-design-5ff0b48b07be66f694dcd67101cefa12_screen.jpg?ts=1566579743",
                     GenreId = 3,
                     Name = "Sherlock Holms",
                     PublishYear = new DateTime(1860, 1, 1),
@@ -117,6 +119,7 @@ namespace ElectronicLibrary.Infrastructure.Data
                 {
                     Id = 3,
                     AuthorId = 2,
+                    ImagePath = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fairytale-old-vintage-book-cover-template-design-5ff0b48b07be66f694dcd67101cefa12_screen.jpg?ts=1566579743",
                     GenreId = 3,
                     Name = "Outcasts",
                     PublishYear = new DateTime(1860, 1, 1),
