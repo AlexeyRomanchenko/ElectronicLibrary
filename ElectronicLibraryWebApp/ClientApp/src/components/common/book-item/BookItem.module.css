@@ -1,3 +1,17 @@
-.wrapper{
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
   margin: 1rem;
+}
+.book__img_container > img {
+  width: 45%;
+}
+.book__description_container {
+  padding: 1rem;
+}
+.hr {
+  width: 100%;
+}
+.comments__wrapper {
+  flex-grow: 1;
 }

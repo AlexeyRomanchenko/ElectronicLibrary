@@ -38,7 +38,7 @@ namespace ElectronicLibraryWebApp.Controllers
                 return BadRequest(ex.Message);
             }
         }
-        [Authorize]
+        //[Authorize]
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] CommentViewModel model)
         {
@@ -46,7 +46,7 @@ namespace ElectronicLibraryWebApp.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var user = await _userManager.FindByNameAsync(User.Identity.Name);
+                    var user = await _userManager.FindByNameAsync("romanchenko.oleksii@gmail.com");
                     if (user != null)
                     {
                         Comment comment = new Comment
