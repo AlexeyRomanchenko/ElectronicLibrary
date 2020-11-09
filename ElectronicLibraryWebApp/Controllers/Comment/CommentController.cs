@@ -40,7 +40,7 @@ namespace ElectronicLibraryWebApp.Controllers
         }
         //[Authorize]
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] CommentViewModel model)
+        public async Task<IActionResult> Post([FromBody]CommentViewModel model)
         {
             try
             {
