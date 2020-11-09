@@ -6,6 +6,7 @@ C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Services
 C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.csproj.CoreCompileInputs.cache
 C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.dll
 C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.pdb
+C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.csprojAssemblyReference.cache
 C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Services.Models\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.deps.json
 C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Services.Models\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.dll
 C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Services.Models\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.pdb
@@ -15,4 +16,3 @@ C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Services.Models\ob
 C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.csproj.CoreCompileInputs.cache
 C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.dll
 C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.pdb
-C:\Users\131_RAV\source\repos\ElectronicLibraryWebApp\ElectronicLibrary.Services.Models\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.csprojAssemblyReference.cache

@@ -40,11 +40,12 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
         {
             try
             {
-                return await _context.Books.Where(b => b.Id == id)
+                var book =  await _context.Books.Where(b => b.Id == id)
                     .Include(a => a.Author)
                     .Include(g => g.Genre)
                     .Include(c => c.Comments)
                     .AsNoTracking().FirstOrDefaultAsync();
+                return book;
             }
             catch (Exception)
             {

@@ -272,9 +272,17 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Text")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(3000)")
+                        .HasMaxLength(3000);
+
+                    b.Property<string>("Theme")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
 
                     b.Property<string>("UserId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -315,15 +323,15 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "7d2686ff-93df-4c2d-b271-e6bb436957e5",
-                            ConcurrencyStamp = "c4387e58-2e87-4f9d-846c-23e6f920a5d1",
+                            Id = "367f553d-58d3-450e-8048-527f1489fb81",
+                            ConcurrencyStamp = "bb7661e9-9194-43b2-86da-f4ea701084d9",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "37378793-847b-46ba-8c13-80aa5d03f91e",
-                            ConcurrencyStamp = "d253c8b4-73f9-4229-ad54-17dc9f880f52",
+                            Id = "c9c6ae40-6480-404e-ba62-6c59fe99b92d",
+                            ConcurrencyStamp = "f8f15930-3b10-4040-8d58-de7934f6bf95",
                             Name = "Moderator",
                             NormalizedName = "MODERATOR"
                         });
@@ -460,7 +468,7 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("ElectronicLibrary.Domain.Core.Library.Comment", b =>
                 {
-                    b.HasOne("ElectronicLibrary.Domain.Core.Book", "Book")
+                    b.HasOne("ElectronicLibrary.Domain.Core.Book", null)
                         .WithMany("Comments")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -468,7 +476,9 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
 
                     b.HasOne("ElectronicLibrary.Domain.Core.Identity.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

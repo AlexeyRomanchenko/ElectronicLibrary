@@ -52,6 +52,7 @@ namespace ElectronicLibraryWebApp.Controllers
                         Comment comment = new Comment
                         {
                             Text = model.Text,
+                            Theme = model.Theme,
                             BookId = model.BookId,
                             UserId = user.Id
                         };
