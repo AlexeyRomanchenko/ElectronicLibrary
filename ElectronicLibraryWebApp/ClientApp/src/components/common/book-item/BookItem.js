@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import {CommentForm} from '../../comments';
+import {CommentForm, CommentList} from '../../comments';
 import styles from './BookItem.module.css';
 export const BookItem = ({book, onBook}) => {
   if(book!=null)
@@ -19,9 +19,9 @@ export const BookItem = ({book, onBook}) => {
         <div className={styles.hr}></div>
         <div className={styles.comments__wrapper}>
           <h3>Comments</h3>
-          <hr/>
-          <h5>You can leave a comment on this book:</h5>
+          <h5>You can leave a comment to this book:</h5>
           <CommentForm/>
+          <CommentList comments={book.comments}/>
         </div>
       </div>
     );

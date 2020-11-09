@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+jCN6JgCzrcn45m70niP9hbOSdiIB3auVbNRIr55xHJqaURvvCAF8jHVn2PJEkg4ss2VbQSQOqWXU3DCWuTu7g==",
+  "dgSpecHash": "kzC2HQV8s4uuHx47cBIbSQrnIqqxVhScwR3TtkxkT5i7Ce8duIleGN6P0I3JKNcN2HdvQ55Okoj4Zlflll4yjg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tom\\source\\repos\\ElectronicLibrary\\EletronicLibrary.Services.Interfaces\\ElectronicLibrary.Services.Interfaces.csproj",
+  "projectFilePath": "C:\\Users\\131_RAV\\source\\repos\\ElectronicLibraryWebApp\\EletronicLibrary.Services.Interfaces\\ElectronicLibrary.Services.Interfaces.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

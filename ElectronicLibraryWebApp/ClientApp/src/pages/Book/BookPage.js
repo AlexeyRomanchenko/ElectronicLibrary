@@ -5,6 +5,7 @@ import styles from './BookPage.module.css';
 import Card from '@material-ui/core/Card';
 import axios from 'axios';
 export const BookPage = () => {
+  
   let { id } = useParams();
   const bookId = parseInt(id);
   const [book, setBook] = useState(null);
@@ -23,7 +24,7 @@ export const BookPage = () => {
     }).catch(err => {
       console.log(err);
     });
-  }, [id])
+  }, [bookId])
 
   return (
     <Card className={styles.wrapper}>

@@ -1,2 +1,3 @@
 import {CommentForm} from './comment-form';
-export {CommentForm};
+import {CommentList} from './comments-list';
+export {CommentForm, CommentList};
