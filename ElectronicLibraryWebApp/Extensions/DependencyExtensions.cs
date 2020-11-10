@@ -17,16 +17,15 @@ namespace ElectronicLibraryWebApp.Extensions
     {
         public static void AddDependencies(this IServiceCollection services)
         {
-            //services.AddDbContext<LibraryContext>();
-
+            services.AddDbContext<LibraryContext>(options =>
+            {
+                options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=ElectricLibrary;Trusted_Connection=True;MultipleActiveResultSets=true");
+            });
             services.AddTransient<UserManager<User>>();
             services.AddTransient<SignInManager<User>>();
             services.AddTransient<RoleManager<IdentityRole>>();
 
-            services.AddDbContext<LibraryContext>(options=> 
-            {
-                options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ElectricLibrary;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-            });
+           
 
             services.AddTransient<JWTHelper>();
             services.AddIdentity<User, IdentityRole>()

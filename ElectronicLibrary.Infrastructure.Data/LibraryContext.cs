@@ -16,13 +16,17 @@ namespace ElectronicLibrary.Infrastructure.Data
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public LibraryContext()
-        {
-
-        }
+        {}
         public LibraryContext(DbContextOptions<LibraryContext> options)
             :base(options)
-        {
+        {}
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Data Source=(localdb)\\mssqllocaldb;Database=ElectricLibrary;Trusted_Connection=True;");
+            }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -31,8 +35,7 @@ namespace ElectronicLibrary.Infrastructure.Data
                 b=>b.Property(e=>e.Status)
                 .HasConversion(b=>b.ToString(),
                 s=>GetStatus(s)));
-       
-            //modelBuilder.Entity<Book>().HasOne(e => e.Genre).WithMany(b=>b.Books);
+            
             modelBuilder.Entity<User>().ToTable("Users").Property(p => p.Id).HasColumnName("Id");
             modelBuilder.Entity<IdentityUserRole<string>>().ToTable("UserRoles").HasKey(e => e.UserId);
             modelBuilder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins").HasKey(e => e.UserId);
