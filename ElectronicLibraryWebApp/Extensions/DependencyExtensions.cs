@@ -33,7 +33,7 @@ namespace ElectronicLibraryWebApp.Extensions
                 .AddDefaultTokenProviders();
             
             
-            services.AddTransient<IRepository<Book>, BookRepository>();
+            services.AddTransient<IBookRepository<Book>, BookRepository>();
             services.AddTransient<IRepository<Booking>, BookingRepository>();
             services.AddTransient<ICommentRepository<Comment>, CommentsRepository>();
             services.AddTransient<IBooking, BookingManager>();
