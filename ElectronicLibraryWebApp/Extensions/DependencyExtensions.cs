@@ -9,6 +9,7 @@ using ElectronicLibrary.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using ElectronicLibrary.Infrastructure.Business;
+using Microsoft.EntityFrameworkCore;
 
 namespace ElectronicLibraryWebApp.Extensions
 {
@@ -16,11 +17,15 @@ namespace ElectronicLibraryWebApp.Extensions
     {
         public static void AddDependencies(this IServiceCollection services)
         {
-            services.AddDbContext<LibraryContext>();
-
+            services.AddDbContext<LibraryContext>(options =>
+            {
+                options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=ElectricLibrary;Trusted_Connection=True;MultipleActiveResultSets=true");
+            });
             services.AddTransient<UserManager<User>>();
             services.AddTransient<SignInManager<User>>();
             services.AddTransient<RoleManager<IdentityRole>>();
+
+           
 
             services.AddTransient<JWTHelper>();
             services.AddIdentity<User, IdentityRole>()
@@ -28,8 +33,9 @@ namespace ElectronicLibraryWebApp.Extensions
                 .AddDefaultTokenProviders();
             
             
-            services.AddTransient<IRepository<Book>, BookRepository>();
+            services.AddTransient<IBookRepository<Book>, BookRepository>();
             services.AddTransient<IRepository<Booking>, BookingRepository>();
+            services.AddTransient<ICommentRepository<Comment>, CommentsRepository>();
             services.AddTransient<IBooking, BookingManager>();
         }
     }

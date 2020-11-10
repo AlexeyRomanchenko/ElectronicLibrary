@@ -15,13 +15,18 @@ namespace ElectronicLibrary.Infrastructure.Data
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public LibraryContext()
+        {}
+        public LibraryContext(DbContextOptions<LibraryContext> options)
+            :base(options)
+        {}
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ElectricLibrary;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-        }
-        public LibraryContext()
-        {
-
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Data Source=(localdb)\\mssqllocaldb;Database=ElectricLibrary;Trusted_Connection=True;");
+            }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,8 +35,7 @@ namespace ElectronicLibrary.Infrastructure.Data
                 b=>b.Property(e=>e.Status)
                 .HasConversion(b=>b.ToString(),
                 s=>GetStatus(s)));
-       
-            //modelBuilder.Entity<Book>().HasOne(e => e.Genre).WithMany(b=>b.Books);
+            
             modelBuilder.Entity<User>().ToTable("Users").Property(p => p.Id).HasColumnName("Id");
             modelBuilder.Entity<IdentityUserRole<string>>().ToTable("UserRoles").HasKey(e => e.UserId);
             modelBuilder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins").HasKey(e => e.UserId);
@@ -99,6 +103,7 @@ namespace ElectronicLibrary.Infrastructure.Data
                 {
                     Id = 1,
                     AuthorId = 1,
+                    ImagePath = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fairytale-old-vintage-book-cover-template-design-5ff0b48b07be66f694dcd67101cefa12_screen.jpg?ts=1566579743",
                     GenreId = 1,
                     Name = ".NET via CLR",
                     PublishYear = new DateTime(2016, 1, 1),
@@ -108,6 +113,7 @@ namespace ElectronicLibrary.Infrastructure.Data
                 {
                     Id = 2,
                     AuthorId = 3,
+                    ImagePath = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fairytale-old-vintage-book-cover-template-design-5ff0b48b07be66f694dcd67101cefa12_screen.jpg?ts=1566579743",
                     GenreId = 3,
                     Name = "Sherlock Holms",
                     PublishYear = new DateTime(1860, 1, 1),
@@ -117,6 +123,7 @@ namespace ElectronicLibrary.Infrastructure.Data
                 {
                     Id = 3,
                     AuthorId = 2,
+                    ImagePath = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fairytale-old-vintage-book-cover-template-design-5ff0b48b07be66f694dcd67101cefa12_screen.jpg?ts=1566579743",
                     GenreId = 3,
                     Name = "Outcasts",
                     PublishYear = new DateTime(1860, 1, 1),

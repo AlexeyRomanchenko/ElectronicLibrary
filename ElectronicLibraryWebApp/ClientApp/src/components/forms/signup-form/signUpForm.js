@@ -35,7 +35,7 @@ export const SignUpForm = () => {
         <TextField className={styles.form__input} name="confirmPassword" type="password" label="Confirm password" variant="outlined" inputRef={register({ required: true })}/>
         {errors.password && <span>This field is required</span>}
       </div>
-      <Button className={styles.form__btn} type="submit" variant="contained" color="primary">Sign in</Button>
+      <Button className={styles.form__btn} type="submit" variant="contained" color="primary">Sign up</Button>
     </form>
   )
 }

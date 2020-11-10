@@ -19,7 +19,7 @@ export const BookCard = ({book}) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card className={styles.wrapper}>
         <CardMedia
           component="img"
           alt="book name"

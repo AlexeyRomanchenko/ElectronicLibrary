@@ -96,6 +96,7 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                             Id = 1,
                             AuthorId = 1,
                             GenreId = 1,
+                            ImagePath = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fairytale-old-vintage-book-cover-template-design-5ff0b48b07be66f694dcd67101cefa12_screen.jpg?ts=1566579743",
                             Name = ".NET via CLR",
                             PublishYear = new DateTime(2016, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TotalAmount = 3
@@ -105,6 +106,7 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                             Id = 2,
                             AuthorId = 3,
                             GenreId = 3,
+                            ImagePath = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fairytale-old-vintage-book-cover-template-design-5ff0b48b07be66f694dcd67101cefa12_screen.jpg?ts=1566579743",
                             Name = "Sherlock Holms",
                             PublishYear = new DateTime(1860, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TotalAmount = 2
@@ -114,6 +116,7 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                             Id = 3,
                             AuthorId = 2,
                             GenreId = 3,
+                            ImagePath = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fairytale-old-vintage-book-cover-template-design-5ff0b48b07be66f694dcd67101cefa12_screen.jpg?ts=1566579743",
                             Name = "Outcasts",
                             PublishYear = new DateTime(1860, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TotalAmount = 1
@@ -269,9 +272,17 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Text")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(3000)")
+                        .HasMaxLength(3000);
+
+                    b.Property<string>("Theme")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
 
                     b.Property<string>("UserId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -312,15 +323,15 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "57248d3b-94a6-4dee-9fbd-d87b6a5578a2",
-                            ConcurrencyStamp = "66f119fe-1b0c-4eda-9b07-8aacfea06b79",
+                            Id = "367f553d-58d3-450e-8048-527f1489fb81",
+                            ConcurrencyStamp = "bb7661e9-9194-43b2-86da-f4ea701084d9",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "fb005787-d24e-4e0c-9b92-4ed7dee7fdba",
-                            ConcurrencyStamp = "37b20ca5-054c-496f-8ed2-ef13703ebbe0",
+                            Id = "c9c6ae40-6480-404e-ba62-6c59fe99b92d",
+                            ConcurrencyStamp = "f8f15930-3b10-4040-8d58-de7934f6bf95",
                             Name = "Moderator",
                             NormalizedName = "MODERATOR"
                         });
@@ -457,7 +468,7 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("ElectronicLibrary.Domain.Core.Library.Comment", b =>
                 {
-                    b.HasOne("ElectronicLibrary.Domain.Core.Book", "Book")
+                    b.HasOne("ElectronicLibrary.Domain.Core.Book", null)
                         .WithMany("Comments")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -465,7 +476,9 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
 
                     b.HasOne("ElectronicLibrary.Domain.Core.Identity.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

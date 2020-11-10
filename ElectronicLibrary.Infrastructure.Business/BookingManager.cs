@@ -37,6 +37,11 @@ namespace ElectronicLibrary.Infrastructure.Business
             
         }
 
+        public Task<bool> Take()
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<bool> TakeAsync()
         {
             throw new NotImplementedException();
