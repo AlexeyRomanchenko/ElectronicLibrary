@@ -1,11 +1,12 @@
-import React from 'react';
+import React , {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import {Link} from 'react-router-dom';
+import {Search} from '../search';
 import styles from './Header.module.css';
-import { SearchForm } from '../search-form';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,7 +21,30 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const Header = () => {
-  const classes = useStyles();
+    const classes = useStyles();
+    const [isVisible, setVisibility] = useState(false);
+    const [books, setBooks] = useState([]);
+
+    const onSearch = (event) => {
+        const key = event.target.value;     
+        if (key.length > 0) {
+            axios({
+                method: 'GET',
+                url: `/api/search/${event.target.value}`
+            }).then(response => {
+                setBooks(response.data);
+                response.data.length > 0 ? setVisibility(true) : setVisibility(false);
+            }).catch(err => {
+                console.error(err);
+            });
+        }
+        else{
+          setVisibility(false);
+        }
+    }
+    const hide = ()=> {
+      setVisibility(false);
+    }
 
   return (
     <div className={classes.root}>
@@ -29,7 +53,8 @@ export const Header = () => {
           <Typography variant="h6" className={classes.title}>
             <Link className={styles.logo} to="/">E-Library</Link>
           </Typography>
-          <SearchForm/>
+
+           <Search hide={hide} books={books} isVisible={isVisible} onSearch={onSearch}/>
           <div className={styles.btn__wrapper}>
           <Link to="/signin">Login</Link>
           <Link to="/signup">Register</Link>
