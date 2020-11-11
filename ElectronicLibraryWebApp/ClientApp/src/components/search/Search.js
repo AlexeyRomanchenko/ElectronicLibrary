@@ -3,7 +3,7 @@ import {SearchForm} from '../forms/search-form';
 import {SearchCard} from '../common/search-card';
 import styles from './Search.module.css';
 
-export const Search = ({onSearch, isVisible, books}) => {
+export const Search = ({onSearch, isVisible, books, hide}) => {
   useEffect(()=> {
     console.log(`isVisible`, isVisible);
   }, [isVisible]);
@@ -11,7 +11,7 @@ export const Search = ({onSearch, isVisible, books}) => {
   return (
   <div className={styles.wrapper}>
     <SearchForm onSearch={onSearch}/>
-    {isVisible ?  <SearchCard books = {books}/> : <></>}
+    {isVisible ?  <SearchCard hide={hide} books = {books}/> : <></>}
     
   </div>
   )

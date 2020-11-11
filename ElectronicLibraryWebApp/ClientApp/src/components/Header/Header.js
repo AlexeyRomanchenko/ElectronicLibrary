@@ -32,7 +32,6 @@ export const Header = () => {
                 method: 'GET',
                 url: `/api/search/${event.target.value}`
             }).then(response => {
-                console.log(response.data);
                 setBooks(response.data);
                 response.data.length > 0 ? setVisibility(true) : setVisibility(false);
             }).catch(err => {
@@ -43,6 +42,9 @@ export const Header = () => {
           setVisibility(false);
         }
     }
+    const hide = ()=> {
+      setVisibility(false);
+    }
 
   return (
     <div className={classes.root}>
@@ -52,7 +54,7 @@ export const Header = () => {
             <Link className={styles.logo} to="/">E-Library</Link>
           </Typography>
 
-           <Search books={books} isVisible={isVisible} onSearch={onSearch}/>
+           <Search hide={hide} books={books} isVisible={isVisible} onSearch={onSearch}/>
           <div className={styles.btn__wrapper}>
           <Link to="/signin">Login</Link>
           <Link to="/signup">Register</Link>
