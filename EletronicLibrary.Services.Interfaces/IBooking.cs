@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace ElectronicLibrary.Services.Interfaces
 {
-    public interface IBooking
+    public interface IBookingManager
     {
         Task<bool> ReserveAsync(BookingModel model);
         Task<bool> TakeAsync(); 

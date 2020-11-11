@@ -69,5 +69,23 @@ namespace ElectronicLibraryWebApp.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                if (id > 0)
+                {
+                    await _repository.BlockAsync(id);
+                    return Ok();
+                }
+                throw new ArgumentNullException("Comment was not identificated");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ElectronicLibrary.Infrastructure.Business
 {
-    public class BookingManager : IBooking
+    public class BookingManager : IBookingManager
     {
         private IBookingRepository<Booking> _repository;
         public BookingManager(IBookingRepository<Booking> repository)

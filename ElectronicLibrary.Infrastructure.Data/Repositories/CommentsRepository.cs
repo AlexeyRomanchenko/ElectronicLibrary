@@ -68,5 +68,25 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                 throw;
             }
         }
+
+        public async Task<bool> BlockAsync(int id)
+        {
+            try
+            {
+                Comment comment = await GetByIdAsync(id);
+                if (comment is null)
+                {
+                    throw new ArgumentException("Comment was not found");
+                }
+                comment.IsBlocked = true;
+                _context.Entry(comment).State = EntityState.Modified;
+                await SaveAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

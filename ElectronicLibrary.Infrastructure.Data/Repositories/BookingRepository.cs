@@ -69,7 +69,7 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
             {
                 if (id > 0)
                 {
-                    return  _context.Bookings.Where(e => e.Status == Status.Booking).Count();
+                    return  _context.Bookings.Where(e => e.Status == Status.Booking || e.Status == Status.Busy).Count();
                 }
                 throw new ArgumentNullException("booking is unavailable");
             }

@@ -12,9 +12,9 @@ namespace ElectronicLibraryWebApp.Controllers.Booking
     [ApiController]
     public class BookingController : ControllerBase
     {
-        private IBooking _bookingManager;
+        private IBookingManager _bookingManager;
         private UserManager<User> _userManager;
-        public BookingController(IBooking bookingManager, UserManager<User> userManager)
+        public BookingController(IBookingManager bookingManager, UserManager<User> userManager)
         {
             _bookingManager = bookingManager;
             _userManager = userManager;

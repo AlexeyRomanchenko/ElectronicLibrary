@@ -6,6 +6,6 @@ namespace ElectronicLibrary.Domain.Interfaces
     public interface IBookRepository<T> : IRepository<T> where T: class
     {
         Task<IEnumerable<T>> GetBooksByKeyNameAsync(string key);
-        Task<int> GetAmountByIdAsync();
+        Task<int> GetAmountByIdAsync(int id);
     }
 }
