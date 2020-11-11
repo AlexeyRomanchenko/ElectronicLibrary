@@ -10,8 +10,8 @@ namespace ElectronicLibraryWebApp.Controllers
     [ApiController]
     public class BookController : ControllerBase
     {
-        private IRepository<Book> _bookRepository;
-        public BookController(IRepository<Book> bookRepository)
+        private IBookRepository<Book> _bookRepository;
+        public BookController(IBookRepository<Book> bookRepository)
         {
             _bookRepository = bookRepository;
         }
@@ -28,7 +28,7 @@ namespace ElectronicLibraryWebApp.Controllers
             {
                 return BadRequest(ex.Message);
             }
-              
+
         }
 
         // GET api/<BookController>/5
