@@ -26,13 +26,17 @@ export const CommentForm = () => {
         name="theme"
         inputRef={register({ required: true })}
          fullWidth/>
+        {errors.theme && <span>theme is required</span>}
       </div>
+
       <div className={styles.comment__textarea}>
         <TextField variant="outlined" label="Message" multiline
         name="text"
         inputRef={register({ required: true })}
           rows={4} fullWidth/>
+         {errors.text && <span>text is required</span>}
       </div>
+
         <Button type="submit" variant="outlined" color="primary">Leave a comment</Button>
     </form>);
 }
