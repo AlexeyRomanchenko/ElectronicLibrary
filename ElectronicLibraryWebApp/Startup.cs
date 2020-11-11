@@ -23,6 +23,7 @@ namespace ElectronicLibraryWebApp
             services.AddControllersWithViews();
             services.AddDependencies();
             services.AddAuth();
+            services.AddSwaggerGen();
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -43,6 +44,11 @@ namespace ElectronicLibraryWebApp
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
