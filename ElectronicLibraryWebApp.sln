@@ -24,8 +24,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElectronicLibrary.Services.Models", "ElectronicLibrary.Services.Models\ElectronicLibrary.Services.Models.csproj", "{D8754809-982D-460D-B998-9B6463817F71}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{2350CD65-CBAF-4879-A12F-33ED61485DD1}"
+	ProjectSection(SolutionItems) = preProject
+		ElectronicLibraryWebApp\.gitignore = ElectronicLibraryWebApp\.gitignore
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectronicLibrary.Infrastructure.Data.UnitTests", "ElectronicLibrary.Infrastructure.Data.UnitTests\ElectronicLibrary.Infrastructure.Data.UnitTests.csproj", "{996E9D62-F3E8-4C8C-9A3C-092DAE5C288C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElectronicLibrary.Infrastructure.Data.UnitTests", "ElectronicLibrary.Infrastructure.Data.UnitTests\ElectronicLibrary.Infrastructure.Data.UnitTests.csproj", "{996E9D62-F3E8-4C8C-9A3C-092DAE5C288C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
