@@ -20,7 +20,7 @@ namespace ElectronicLibraryWebApp.Controllers.Booking
             _userManager = userManager;
         }
         
-        [Authorize]
+        //[Authorize]
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] int bookId)
         {
@@ -28,7 +28,7 @@ namespace ElectronicLibraryWebApp.Controllers.Booking
             {
                 if (bookId > 0)
                 {
-                    User user = await _userManager.FindByNameAsync(User.Identity.Name);
+                    User user = await _userManager.FindByNameAsync("romanchenko.oleksii@gmail.com");
                     BookingModel model = new BookingModel(bookId, user.Id);
                     bool isReserved = await _bookingManager.ReserveAsync(model);
                     return Ok(isReserved);

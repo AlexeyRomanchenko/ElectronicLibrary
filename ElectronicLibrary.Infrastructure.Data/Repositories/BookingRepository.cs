@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ElectronicLibrary.Infrastructure.Data.Repositories
 {
-    public class BookingRepository : IRepository<Booking>
+    public class BookingRepository : IBookingRepository<Booking>
     {
         private LibraryContext _context;
         public BookingRepository(LibraryContext context)
@@ -62,6 +62,23 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                 throw;
             }
         }
+
+        public int GetUnavailableBookingsById(int id)
+        {
+            try
+            {
+                if (id > 0)
+                {
+                    return  _context.Bookings.Where(e => e.Status == Status.Booking).Count();
+                }
+                throw new ArgumentNullException("booking is unavailable");
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public async Task SaveAsync()
         {
             await _context.SaveChangesAsync();

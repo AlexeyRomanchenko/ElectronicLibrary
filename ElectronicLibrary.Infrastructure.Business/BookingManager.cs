@@ -9,8 +9,8 @@ namespace ElectronicLibrary.Infrastructure.Business
 {
     public class BookingManager : IBooking
     {
-        private IRepository<Booking> _repository;
-        public BookingManager(IRepository<Booking> repository)
+        private IBookingRepository<Booking> _repository;
+        public BookingManager(IBookingRepository<Booking> repository)
         {
             _repository = repository;
         }
@@ -36,11 +36,11 @@ namespace ElectronicLibrary.Infrastructure.Business
             }
             
         }
-
-        public Task<bool> Take()
+        private int GetUnavailableBooksByBookId(int bookId)
         {
-            throw new NotImplementedException();
+            return _repository.GetUnavailableBookingsById(bookId);
         }
+  
 
         public Task<bool> TakeAsync()
         {
