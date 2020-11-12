@@ -36,13 +36,9 @@ namespace ElectronicLibrary.Infrastructure.Business
                 {
                     await _repository.CreateAsync(booking);
                     await _repository.SaveAsync();
-                    return true;
+                    return booking.Id;
                 }
-                return false;
-            }
-                await _repository.CreateAsync(booking);
-                await _repository.SaveAsync();
-                return booking.Id;
+                throw new ArgumentException();
             }
             catch (Exception)
             {

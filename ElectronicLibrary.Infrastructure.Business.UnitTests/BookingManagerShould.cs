@@ -96,7 +96,9 @@ namespace ElectronicLibrary.Infrastructure.Business.UnitTests
 
                     var model = GetBookingModel(context, 1);
                     var repository = new BookingRepository(context);
-                    var manager = new BookingManager(repository);
+                    var bookRepository = new BookRepository(context);
+                    var bookManager = new BookManager(bookRepository, repository);
+                    var manager = new BookingManager(repository, bookManager);
 
                     int bookingId =  await manager.ReserveAsync(model);
                     Assert.InRange<int>(bookingId, 1, 2);
@@ -121,7 +123,9 @@ namespace ElectronicLibrary.Infrastructure.Business.UnitTests
                     await context.Database.OpenConnectionAsync();
                     context.Database.EnsureCreated();
                     var repository = new BookingRepository(context);
-                    var manager = new BookingManager(repository);
+                    var bookRepository = new BookRepository(context);
+                    var bookManager = new BookManager(bookRepository, repository);
+                    var manager = new BookingManager(repository, bookManager);
 
                     await Assert.ThrowsAsync<InvalidOperationException>(
                         async()=> 
@@ -147,7 +151,10 @@ namespace ElectronicLibrary.Infrastructure.Business.UnitTests
                     await context.Database.OpenConnectionAsync();
                     context.Database.EnsureCreated();
                     var repository = new BookingRepository(context);
-                    var manager = new BookingManager(repository);
+                    var bookRepository = new BookRepository(context);
+                    var bookManager = new BookManager(bookRepository, repository);
+                    var manager = new BookingManager(repository, bookManager);
+
                     var booking = GetBookingModel(context, 1);
                     var bookingId = await manager.ReserveAsync(booking);
                     if (bookingId > 0)
