@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ElectronicLibrary.Infrastructure.Data.Repositories
 {
-    public class BookingRepository : IRepository<Booking>
+    public class BookingRepository : IBookingRepository<Booking>
     {
         private LibraryContext _context;
         public BookingRepository(LibraryContext context)
@@ -62,9 +62,52 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                 throw;
             }
         }
+
+        public int GetUnavailableBookingsById(int id)
+        {
+            try
+            {
+                if (id > 0)
+                {
+                    return  _context.Bookings.Where(e => e.Status == Status.Booking || e.Status == Status.Busy).Count();
+                }
+                throw new ArgumentNullException("booking is unavailable");
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public async Task SaveAsync()
         {
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<Booking> GetBookedItemByIdAsync(int bookingId)
+        {
+            try
+            {
+                if (bookingId > 0)
+                {
+                    return await _context.Bookings
+               .Where(
+                   e => e.Id == bookingId &&
+                   e.Status == Status.Booking
+                   )
+                   .FirstAsync();
+
+                }
+                throw new ArgumentException("Booking was not identified");
+            }
+            catch (InvalidOperationException)
+            {
+                throw new InvalidOperationException("There was an error with finding your booking"); 
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

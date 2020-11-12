@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "ElectronicLibrary.Infrastructure.Business/1.0.0": {
         "dependencies": {
+          "ElectronicLibrary.Domain.Core": "1.0.0",
           "ElectronicLibrary.Domain.Interfaces": "1.0.0",
           "ElectronicLibrary.Services.Interfaces": "1.0.0",
           "ElectronicLibrary.Services.Models": "1.0.0"

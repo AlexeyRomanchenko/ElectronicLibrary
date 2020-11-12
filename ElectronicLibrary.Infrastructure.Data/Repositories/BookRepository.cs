@@ -36,6 +36,18 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
             }          
         }
 
+        public async Task<int> GetAmountByIdAsync(int id)
+        {
+            try
+            {
+                return await _context.Books.Where(b => b.Id == id).Select(b=>b.TotalAmount).FirstOrDefaultAsync();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public async Task<Book> GetByIdAsync(int id)
         {
             try

@@ -7,14 +7,19 @@ using System.Threading.Tasks;
 
 namespace ElectronicLibrary.Infrastructure.Business
 {
-    public class BookingManager : IBooking
+    public class BookingManager : IBookingManager
     {
-        private IRepository<Booking> _repository;
-        public BookingManager(IRepository<Booking> repository)
+        private IBookingRepository<Booking> _repository;
+        private IBookManager _bookMananger;
+        public BookingManager(
+            IBookingRepository<Booking> repository,
+            IBookManager bookManager
+            )
         {
             _repository = repository;
+            _bookMananger = bookManager;
         }
-        public async Task<bool> ReserveAsync(BookingModel model)
+        public async Task<int> ReserveAsync(BookingModel model)
         {
             try
             {
@@ -26,25 +31,41 @@ namespace ElectronicLibrary.Infrastructure.Business
                     BookId = model._bookId,
                     UserId = model._userId
                 };
-                await _repository.CreateAsync(booking);
-                await _repository.SaveAsync();
-                return true;
+                bool isAvailable = await _bookMananger.IsBookAvailableAsync(model._bookId);
+                if (isAvailable)
+                {
+                    await _repository.CreateAsync(booking);
+                    await _repository.SaveAsync();
+                    return booking.Id;
+                }
+                throw new ArgumentException("No bookings were available");
             }
             catch (Exception)
             {
                 throw;
             }
             
-        }
+        } 
 
-        public Task<bool> Take()
+        public async Task<bool> TakeAsync(int bookingId)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> TakeAsync()
-        {
-            throw new NotImplementedException();
+            try
+            {
+                if (bookingId > 0)
+                {
+                    var booking = await _repository.GetBookedItemByIdAsync(bookingId);
+                    booking.Status = Status.Busy;
+                    booking.BookingDate = DateTime.UtcNow;
+                    booking.IssueDate = DateTime.UtcNow.AddDays(30);
+                    await _repository.SaveAsync();
+                    return true;
+                }
+                throw new ArgumentException("booking is not identified");
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
