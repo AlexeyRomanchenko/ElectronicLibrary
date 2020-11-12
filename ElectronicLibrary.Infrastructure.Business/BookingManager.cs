@@ -38,7 +38,7 @@ namespace ElectronicLibrary.Infrastructure.Business
                     await _repository.SaveAsync();
                     return booking.Id;
                 }
-                throw new ArgumentException();
+                throw new ArgumentException("No bookings were available");
             }
             catch (Exception)
             {
