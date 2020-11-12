@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using ElectronicLibrary.Domain.Core;
 using ElectronicLibrary.Domain.Interfaces;
+using ElectronicLibraryWebApp.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ElectronicLibraryWebApp.Controllers
@@ -52,8 +53,31 @@ namespace ElectronicLibraryWebApp.Controllers
 
         // POST api/<BookController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> Post([FromBody] BookViewModel model)
         {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    Book book = new Book
+                    {
+                        AuthorId = model.AuthorId,
+                        GenreId = model.GenreId,
+                        ImagePath = model.ImagePath,
+                        PublishYear = model.PublishYear,
+                        Name = model.Name,
+                        TotalAmount = model.TotalAmount
+                    };
+                    await _bookRepository.CreateAsync(book);
+                    await _bookRepository.SaveAsync();
+                    return Ok();
+                }
+                throw new Exception("Book is not valid");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         // PUT api/<BookController>/5
