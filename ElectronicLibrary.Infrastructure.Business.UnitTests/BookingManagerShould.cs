@@ -95,10 +95,15 @@ namespace ElectronicLibrary.Infrastructure.Business.UnitTests
                     context.Database.EnsureCreated();
 
                     var model = GetBookingModel(context, 1);
+                    var bookRepository = new BookRepository(context);
                     var repository = new BookingRepository(context);
-                    var manager = new BookingManager(repository);
+                    var bookManager = new BookManager(bookRepository, repository);
+                    var manager = new BookingManager(repository, bookManager);
 
-                    bool isReserved =  await manager.ReserveAsync(model);
+                    bool isFirstReserved =  await manager.ReserveAsync(model);
+                    bool isSecondReserved = await manager.ReserveAsync(model);
+                    Assert.True(isFirstReserved);
+                    Assert.False(isSecondReserved);
                 }
             }
             catch (Exception ex)

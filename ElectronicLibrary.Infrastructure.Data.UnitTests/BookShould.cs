@@ -53,7 +53,7 @@ namespace ElectronicLibrary.Infrastructure.Tests
         }
 
         [Theory]
-        [InlineData("test")]
+        [InlineData("net")]
         public async Task ToBeReturnedByKeywords(string key)
         {
             var connection = "Server=(localdb)\\mssqllocaldb;Database=ElectricLibrary;Trusted_Connection=True;MultipleActiveResultSets=true";

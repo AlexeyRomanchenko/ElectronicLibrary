@@ -122,8 +122,9 @@ namespace ElectronicLibrary.Infrastructure.Business.UnitTests
 
                     var repository = new BookRepository(context);
                     var bookingRepository = new BookingRepository(context);
-                    BookingManager bookingManager = new BookingManager(bookingRepository);
                     var manager = new BookManager(repository, bookingRepository);
+                    BookingManager bookingManager = new BookingManager(bookingRepository, manager);
+                    
 
                     var bookId = GenerateBookId(context, 1);
                     var bookingModel = GetBookingModel(context, bookId);

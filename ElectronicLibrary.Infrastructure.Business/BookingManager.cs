@@ -10,9 +10,14 @@ namespace ElectronicLibrary.Infrastructure.Business
     public class BookingManager : IBookingManager
     {
         private IBookingRepository<Booking> _repository;
-        public BookingManager(IBookingRepository<Booking> repository)
+        private IBookManager _bookMananger;
+        public BookingManager(
+            IBookingRepository<Booking> repository,
+            IBookManager bookManager
+            )
         {
             _repository = repository;
+            _bookMananger = bookManager;
         }
         public async Task<bool> ReserveAsync(BookingModel model)
         {
@@ -26,9 +31,14 @@ namespace ElectronicLibrary.Infrastructure.Business
                     BookId = model._bookId,
                     UserId = model._userId
                 };
-                await _repository.CreateAsync(booking);
-                await _repository.SaveAsync();
-                return true;
+                bool isAvailable = await _bookMananger.IsBookAvailableAsync(model._bookId);
+                if (isAvailable)
+                {
+                    await _repository.CreateAsync(booking);
+                    await _repository.SaveAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception)
             {
@@ -36,12 +46,6 @@ namespace ElectronicLibrary.Infrastructure.Business
             }
             
         }
-        private int GetUnavailableBooksByBookId(int bookId)
-        {
-            return _repository.GetUnavailableBookingsById(bookId);
-        }
-  
-
         public Task<bool> TakeAsync()
         {
             throw new NotImplementedException();
