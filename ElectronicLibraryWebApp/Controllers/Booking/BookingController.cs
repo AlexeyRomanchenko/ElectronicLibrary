@@ -30,8 +30,8 @@ namespace ElectronicLibraryWebApp.Controllers.Booking
                 {
                     User user = await _userManager.FindByNameAsync("romanchenko.oleksii@gmail.com");
                     BookingModel model = new BookingModel(bookId, user.Id);
-                    bool isReserved = await _bookingManager.ReserveAsync(model);
-                    return Ok(isReserved);
+                    int bookingId = await _bookingManager.ReserveAsync(model);
+                    return Ok(bookingId);
                 }
                 throw new ArgumentOutOfRangeException("book is not valid");
             }

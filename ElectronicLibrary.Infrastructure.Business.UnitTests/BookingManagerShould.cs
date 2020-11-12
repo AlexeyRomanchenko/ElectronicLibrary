@@ -98,7 +98,8 @@ namespace ElectronicLibrary.Infrastructure.Business.UnitTests
                     var repository = new BookingRepository(context);
                     var manager = new BookingManager(repository);
 
-                    bool isReserved =  await manager.ReserveAsync(model);
+                    int bookingId =  await manager.ReserveAsync(model);
+                    Assert.InRange<int>(bookingId, 1, 2);
                 }
             }
             catch (Exception ex)
@@ -106,6 +107,60 @@ namespace ElectronicLibrary.Infrastructure.Business.UnitTests
                 throw ex;
             }
            
+        }
+
+        [Theory]
+        [InlineData(2)]
+        public async Task ThrowErrorIfNotBooking(int bookingId)
+        {
+            try
+            {
+                var options = GetFakeConnection();
+                using (var context = new LibraryContext(options))
+                {
+                    await context.Database.OpenConnectionAsync();
+                    context.Database.EnsureCreated();
+                    var repository = new BookingRepository(context);
+                    var manager = new BookingManager(repository);
+
+                    await Assert.ThrowsAsync<InvalidOperationException>(
+                        async()=> 
+                        { 
+                            await manager.TakeAsync(bookingId);
+                        });
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [Fact]
+        public async Task ChangeBookingStatusSuccessfully()
+        {
+            try
+            {
+                var options = GetFakeConnection();
+                using (var context = new LibraryContext(options))
+                {
+                    await context.Database.OpenConnectionAsync();
+                    context.Database.EnsureCreated();
+                    var repository = new BookingRepository(context);
+                    var manager = new BookingManager(repository);
+                    var booking = GetBookingModel(context, 1);
+                    var bookingId = await manager.ReserveAsync(booking);
+                    if (bookingId > 0)
+                    {
+                        await manager.TakeAsync(bookingId);
+                    }
+                   
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

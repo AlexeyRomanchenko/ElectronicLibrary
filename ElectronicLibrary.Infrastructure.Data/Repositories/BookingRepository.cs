@@ -83,5 +83,31 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
         {
             await _context.SaveChangesAsync();
         }
+
+        public async Task<Booking> GetBookedItemByIdAsync(int bookingId)
+        {
+            try
+            {
+                if (bookingId > 0)
+                {
+                    return await _context.Bookings
+               .Where(
+                   e => e.Id == bookingId &&
+                   e.Status == Status.Booking
+                   )
+                   .FirstAsync();
+
+                }
+                throw new ArgumentException("Booking was not identified");
+            }
+            catch (InvalidOperationException)
+            {
+                throw new InvalidOperationException("There was an error with finding your booking"); 
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

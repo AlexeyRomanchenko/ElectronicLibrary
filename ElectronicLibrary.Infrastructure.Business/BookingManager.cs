@@ -14,7 +14,7 @@ namespace ElectronicLibrary.Infrastructure.Business
         {
             _repository = repository;
         }
-        public async Task<bool> ReserveAsync(BookingModel model)
+        public async Task<int> ReserveAsync(BookingModel model)
         {
             try
             {
@@ -28,23 +28,34 @@ namespace ElectronicLibrary.Infrastructure.Business
                 };
                 await _repository.CreateAsync(booking);
                 await _repository.SaveAsync();
-                return true;
+                return booking.Id;
             }
             catch (Exception)
             {
                 throw;
             }
             
-        }
-        private int GetUnavailableBooksByBookId(int bookId)
-        {
-            return _repository.GetUnavailableBookingsById(bookId);
-        }
-  
+        } 
 
-        public Task<bool> TakeAsync()
+        public async Task<bool> TakeAsync(int bookingId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (bookingId > 0)
+                {
+                    var booking = await _repository.GetBookedItemByIdAsync(bookingId);
+                    booking.Status = Status.Busy;
+                    booking.BookingDate = DateTime.UtcNow;
+                    booking.IssueDate = DateTime.UtcNow.AddDays(30);
+                    await _repository.SaveAsync();
+                    return true;
+                }
+                throw new ArgumentException("booking is not identified");
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

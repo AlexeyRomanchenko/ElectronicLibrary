@@ -127,8 +127,8 @@ namespace ElectronicLibrary.Infrastructure.Business.UnitTests
 
                     var bookId = GenerateBookId(context, 1);
                     var bookingModel = GetBookingModel(context, bookId);
-                    bool isReserved = await bookingManager.ReserveAsync(bookingModel);
-                    if (isReserved)
+                    int bookingId = await bookingManager.ReserveAsync(bookingModel);
+                    if (bookingId > 0)
                     {
                         var isAvailable = await manager.IsBookAvailableAsync(bookId);
                         Assert.False(isAvailable);
