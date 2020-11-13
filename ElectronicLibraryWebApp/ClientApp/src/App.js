@@ -6,6 +6,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import { CreateBook } from './pages/Dashboard/Books/Create/CreateBook';
 
 const App = () => {
   return (<Router>
@@ -13,6 +14,9 @@ const App = () => {
       <Switch>
           <Route path="/signin">
             <SignIn />
+          </Route>
+          <Route path="/dashboard">
+            <CreateBook />
           </Route>
           <Route path="/signup">
             <SignUp />
