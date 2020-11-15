@@ -1,0 +1,9 @@
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Services.ImageSaver\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.ImageService.deps.json
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Services.ImageSaver\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.ImageService.dll
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Services.ImageSaver\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.ImageService.pdb
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Services.ImageSaver\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.ImageService.csprojAssemblyReference.cache
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Services.ImageSaver\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.ImageService.AssemblyInfoInputs.cache
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Services.ImageSaver\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.ImageService.AssemblyInfo.cs
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Services.ImageSaver\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.ImageService.csproj.CoreCompileInputs.cache
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Services.ImageSaver\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.ImageService.dll
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectronicLibrary.Services.ImageSaver\obj\Debug\netcoreapp3.1\ElectronicLibrary.Services.ImageService.pdb

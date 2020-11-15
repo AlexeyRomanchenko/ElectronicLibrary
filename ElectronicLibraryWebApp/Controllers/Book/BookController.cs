@@ -2,7 +2,9 @@
 using System.Threading.Tasks;
 using ElectronicLibrary.Domain.Core;
 using ElectronicLibrary.Domain.Interfaces;
+using ElectronicLibrary.Services.Interfaces;
 using ElectronicLibraryWebApp.ViewModels;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ElectronicLibraryWebApp.Controllers
@@ -12,9 +14,17 @@ namespace ElectronicLibraryWebApp.Controllers
     public class BookController : ControllerBase
     {
         private IBookRepository<Book> _bookRepository;
-        public BookController(IBookRepository<Book> bookRepository)
+        private IImageService _imageService;
+        private IHostingEnvironment _env;
+        public BookController(
+            IBookRepository<Book> bookRepository,
+            IImageService imageService,
+            IHostingEnvironment env
+            )
         {
             _bookRepository = bookRepository;
+            _imageService = imageService;
+            _env = env;
         }
         // GET: api/<BookController>
         [HttpGet]
@@ -59,11 +69,12 @@ namespace ElectronicLibraryWebApp.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    string publicRoot = _env.WebRootPath;
                     Book book = new Book
                     {
                         AuthorId = model.AuthorId,
                         GenreId = model.GenreId,
-                        ImagePath = model.ImagePath,
+                        ImagePath = await _imageService.SaveImageAsync(publicRoot, model.ImagePath),
                         PublishYear = model.PublishYear,
                         Name = model.Name,
                         TotalAmount = model.TotalAmount

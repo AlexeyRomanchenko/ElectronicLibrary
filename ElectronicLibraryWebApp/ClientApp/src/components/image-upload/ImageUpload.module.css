@@ -1,0 +1,15 @@
+.wrapper {
+  border: 1px solid black;
+  padding: 1rem;
+}
+.input {
+  display: none;
+}
+.image__placeholder {
+  width: 14rem;
+  height: 14rem;
+  background-color: #dedede;
+  border: 1px solid #b7b7b7;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

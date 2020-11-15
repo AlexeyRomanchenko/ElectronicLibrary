@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -9,15 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 import styles from './BookCard.module.css';
 
-const useStyles = makeStyles({
-  root: {
-    width: 300,
-  },
-});
-
 export const BookCard = ({book}) => {
-  const classes = useStyles();
-
   return (
     <Card className={styles.wrapper}>
         <CardMedia

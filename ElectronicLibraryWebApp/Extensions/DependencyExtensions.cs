@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using ElectronicLibrary.Infrastructure.Business;
 using Microsoft.EntityFrameworkCore;
+using ElectronicLibrary.Services;
 
 namespace ElectronicLibraryWebApp.Extensions
 {
@@ -25,19 +26,19 @@ namespace ElectronicLibraryWebApp.Extensions
             services.AddTransient<SignInManager<User>>();
             services.AddTransient<RoleManager<IdentityRole>>();
 
-           
-
             services.AddTransient<JWTHelper>();
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<LibraryContext>()
                 .AddDefaultTokenProviders();
-            
+
+            services.AddTransient<IImageService, ImageService>();
             
             services.AddTransient<IBookRepository<Book>, BookRepository>();
             services.AddTransient<IBookingRepository<Booking>, BookingRepository>();
             services.AddTransient<ICommentRepository<Comment>, CommentsRepository>();
             services.AddTransient<IBookingManager, BookingManager>();
             services.AddTransient<IBookManager, BookManager>();
+
         }
     }
 }

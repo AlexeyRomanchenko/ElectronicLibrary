@@ -79,9 +79,16 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
             }
         }
 
-        public async Task SaveAsync()
+        public async Task<bool> SaveAsync()
         {
-            await _context.SaveChangesAsync();
+            try
+            {
+                return await _context.SaveChangesAsync() > 0;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public async Task<Booking> GetBookedItemByIdAsync(int bookingId)

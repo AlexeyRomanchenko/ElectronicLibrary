@@ -57,11 +57,11 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
             }
         }
 
-        public async Task SaveAsync()
+        public async Task<bool> SaveAsync()
         {
             try
             {
-                await _context.SaveChangesAsync();
+                return await _context.SaveChangesAsync() > 0;
             }
             catch (Exception)
             {
