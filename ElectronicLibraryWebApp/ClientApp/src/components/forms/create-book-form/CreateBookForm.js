@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { TextField, Button } from '@material-ui/core';
 import { MuiPickersUtilsProvider, KeyboardDatePicker} from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
@@ -10,6 +10,36 @@ import {useForm} from 'react-hook-form';
 import axios from 'axios';
 
 export const CreateBookForm = () => {
+  useEffect(()=> {
+    axios({
+      method:'GET',
+      url: '/api/author'
+    }).then(response=> {
+      const _authors = response.data.map(author => {
+        return {
+          id: author.id,
+          label:`${author.firstname} ${author.lastname}`}
+      });
+      console.log(_authors);
+      setAuthors(_authors);
+    });
+
+    axios({
+      method:'GET',
+      url: '/api/Genre'
+    }).then(response=> {
+      const _genres = response.data.map(genre => {
+        return {
+          id: genre.id,
+          label:`${genre.name}`}
+      });
+      console.log(_genres);
+      setGenres(_genres);
+    });
+
+  },[]);
+  const [authors, setAuthors] = useState([]);
+  const [genres, setGenres] = useState([]);
   const [authorId, setAuthor] = useState(null);
   const [genreId, setGenre] = useState(null);
   const [image, _setImage] = useState(null);
@@ -70,10 +100,10 @@ export const CreateBookForm = () => {
         />
         </MuiPickersUtilsProvider>
         {errors.releaseDate && <span>This field is required</span>} 
-        <ChipsBlock setItem={selectedAuthor} header="Please, select or create a new author for the book" form={CreateAuthorForm}/>
+        <ChipsBlock chips={authors} setItem={selectedAuthor} header="Please, select or create a new author for the book" form={CreateAuthorForm}/>
         <input type="hidden" name="author" defaultValue={authorId} ref={register({required: true})}/>
         {errors.author && <span>This field is required!!!!!</span>}     
-        <ChipsBlock setItem={selectedGenre} header="Please, select or create a new genre for the book" form={CreateGenreForm}/>
+        <ChipsBlock chips={genres} setItem={selectedGenre} header="Please, select or create a new genre for the book" form={CreateGenreForm}/>
         <input type="hidden" name="genre" defaultValue={authorId} ref={register({required: true})}/>
         {errors.genre && <span>This field is required!!!!!</span>}
         <ImageUpload setImage={setImage}/>

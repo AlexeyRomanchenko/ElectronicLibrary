@@ -4,7 +4,7 @@ import {Done} from '@material-ui/icons';
 import { ResponsiveDialog } from '../responsive-dialog';
 import { withProps } from '../../../hocs/withProps';
 
-export const ChipsBlock = ({chips=[{id: 1, label: 'Doyle'}], header, form, setItem}) => {
+export const ChipsBlock = ({chips=[], header, form, setItem}) => {
     const [isOpen, setDialogStatus] = useState(false);
     const [selectedItem, setSelectedItem] = useState(null);
     
