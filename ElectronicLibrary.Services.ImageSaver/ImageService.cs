@@ -13,14 +13,14 @@ namespace ElectronicLibrary.Services
             try
             {
                 long Timestamp = new DateTimeOffset(DateTime.UtcNow).ToUnixTimeMilliseconds();
-                string filename = $"{path}\\{Timestamp}.jpg";
+                string filename = $"{Timestamp}.jpg";
 
                 base64string = GetBaseString(base64string);
 
                 byte[] tempBytes = Convert.FromBase64String(base64string);
-                await File.WriteAllBytesAsync(filename, tempBytes);
+                await File.WriteAllBytesAsync($"{path}/"+filename, tempBytes);
 
-                return filename;
+                return $"/Images/{filename}";
             }
             catch (Exception)
             {

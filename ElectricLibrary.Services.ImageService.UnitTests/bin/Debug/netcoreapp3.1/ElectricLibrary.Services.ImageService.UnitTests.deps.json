@@ -690,8 +690,24 @@
         }
       },
       "ElectronicLibrary.Services.ImageService/1.0.0": {
+        "dependencies": {
+          "ElectronicLibrary.Services.Interfaces": "1.0.0"
+        },
         "runtime": {
           "ElectronicLibrary.Services.ImageService.dll": {}
+        }
+      },
+      "ElectronicLibrary.Services.Interfaces/1.0.0": {
+        "dependencies": {
+          "ElectronicLibrary.Services.Models": "1.0.0"
+        },
+        "runtime": {
+          "ElectronicLibrary.Services.Interfaces.dll": {}
+        }
+      },
+      "ElectronicLibrary.Services.Models/1.0.0": {
+        "runtime": {
+          "ElectronicLibrary.Services.Models.dll": {}
         }
       }
     }
@@ -1053,6 +1069,16 @@
       "hashPath": "xunit.runner.visualstudio.2.4.0.nupkg.sha512"
     },
     "ElectronicLibrary.Services.ImageService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ElectronicLibrary.Services.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ElectronicLibrary.Services.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

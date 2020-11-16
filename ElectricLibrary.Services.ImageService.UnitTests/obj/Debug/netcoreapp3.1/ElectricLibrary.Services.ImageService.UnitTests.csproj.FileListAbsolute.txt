@@ -96,3 +96,7 @@ C:\Users\Tom\source\repos\ElectronicLibrary\ElectricLibrary.Services.ImageServic
 C:\Users\Tom\source\repos\ElectronicLibrary\ElectricLibrary.Services.ImageService.UnitTests\obj\Debug\netcoreapp3.1\ElectricLibrary.Services.ImageService.UnitTests.genruntimeconfig.cache
 C:\Users\Tom\source\repos\ElectronicLibrary\ElectricLibrary.Services.ImageService.UnitTests\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.ImageService.dll
 C:\Users\Tom\source\repos\ElectronicLibrary\ElectricLibrary.Services.ImageService.UnitTests\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.ImageService.pdb
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectricLibrary.Services.ImageService.UnitTests\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Interfaces.dll
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectricLibrary.Services.ImageService.UnitTests\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.dll
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectricLibrary.Services.ImageService.UnitTests\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Interfaces.pdb
+C:\Users\Tom\source\repos\ElectronicLibrary\ElectricLibrary.Services.ImageService.UnitTests\bin\Debug\netcoreapp3.1\ElectronicLibrary.Services.Models.pdb

@@ -7,10 +7,12 @@ import { CreateAuthorForm } from '../create-author-form';
 import { CreateGenreForm } from '../create-genre-form';
 import { ImageUpload } from '../../image-upload';
 import {useForm} from 'react-hook-form';
+import axios from 'axios';
 
 export const CreateBookForm = () => {
   const [authorId, setAuthor] = useState(null);
   const [genreId, setGenre] = useState(null);
+  const [image, _setImage] = useState(null);
   const { register, handleSubmit, errors } = useForm();
   const [publishYear, setPublishYear] = useState(new Date());
 
@@ -18,7 +20,7 @@ export const CreateBookForm = () => {
     setPublishYear(year);
   }
   const setImage = (image) => {
-    console.log(image);
+    _setImage(image);
   }
   const selectedAuthor = (author) => {
     setAuthor(author.id);
@@ -28,8 +30,21 @@ export const CreateBookForm = () => {
   }
   const onSubmit = data => {
     console.log(data, errors);
-    if(authorId == null) {
-    }
+    var formData = new FormData();
+    formData.append("imagePath",image );
+    formData.append('name', data.name);
+    formData.append('authorId', data.author);
+    formData.append('publishYear',`${data.releaseDate}-01-01`);
+    formData.append('totalAmount', data.amount);
+    formData.append('genreId', data.genre);
+    axios({
+      method:'POST',
+      url:'/api/book',
+      headers: new Headers({
+        "Content-Type": "multipart/form-data"
+      }),
+     data: formData
+    });
   }
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -54,7 +69,7 @@ export const CreateBookForm = () => {
           }}
         />
         </MuiPickersUtilsProvider>
-        {errors.releaseDate && <span>This fisl;dls;dl;sld;sld;l;equired</span>} 
+        {errors.releaseDate && <span>This field is required</span>} 
         <ChipsBlock setItem={selectedAuthor} header="Please, select or create a new author for the book" form={CreateAuthorForm}/>
         <input type="hidden" name="author" defaultValue={authorId} ref={register({required: true})}/>
         {errors.author && <span>This field is required!!!!!</span>}     

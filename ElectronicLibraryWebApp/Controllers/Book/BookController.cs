@@ -63,13 +63,13 @@ namespace ElectronicLibraryWebApp.Controllers
 
         // POST api/<BookController>
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] BookViewModel model)
+        public async Task<IActionResult> Post([FromForm]BookViewModel model)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    string publicRoot = _env.WebRootPath;
+                    string publicRoot = _env.WebRootPath +"/Images";
                     Book book = new Book
                     {
                         AuthorId = model.AuthorId,
