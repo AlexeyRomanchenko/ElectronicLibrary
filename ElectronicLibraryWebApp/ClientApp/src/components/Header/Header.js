@@ -7,10 +7,11 @@ import {Link} from 'react-router-dom';
 import {Search} from '../search';
 import styles from './Header.module.css';
 import axios from 'axios';
+import Icon from '@material-ui/core/Icon';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+        flexGrow: 1
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -55,10 +56,12 @@ export const Header = () => {
           </Typography>
 
            <Search hide={hide} books={books} isVisible={isVisible} onSearch={onSearch}/>
-          <div className={styles.btn__wrapper}>
-          <Link to="/signin">Login</Link>
-          <Link to="/signup">Register</Link>
-        </div>
+                  <div className={styles.btn__wrapper}>
+                      <Icon className="fa fa-plus-circle" />
+                      <Link to="/dashboard">Cabinet</Link>
+                      <Link to="/signin">Login</Link>
+                      <Link to="/signup">Register</Link>
+                  </div>
         </Toolbar>
       </AppBar>
     </div>

@@ -30,11 +30,17 @@
     <ProjectReference Include="..\ElectronicLibrary.Domain.Interfaces\ElectronicLibrary.Domain.Interfaces.csproj" />
     <ProjectReference Include="..\ElectronicLibrary.Infrastructure.Business\ElectronicLibrary.Infrastructure.Business.csproj" />
     <ProjectReference Include="..\ElectronicLibrary.Infrastructure.Data\ElectronicLibrary.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\ElectronicLibrary.Services.ImageSaver\ElectronicLibrary.Services.ImageService.csproj" />
     <ProjectReference Include="..\EletronicLibrary.Services.Interfaces\ElectronicLibrary.Services.Interfaces.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="ClientApp\src\components\search\" />
+    <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\1605548984259.jpg" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
