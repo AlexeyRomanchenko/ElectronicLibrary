@@ -15,6 +15,7 @@ namespace ElectronicLibrary.Infrastructure.Data
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<Log> Logs { get; set; }
         public LibraryContext()
         {}
         public LibraryContext(DbContextOptions<LibraryContext> options)

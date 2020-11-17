@@ -294,6 +294,31 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                     b.ToTable("Comments");
                 });
 
+            modelBuilder.Entity("ElectronicLibrary.Domain.Core.Library.Log", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Logs");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -323,15 +348,15 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "367f553d-58d3-450e-8048-527f1489fb81",
-                            ConcurrencyStamp = "bb7661e9-9194-43b2-86da-f4ea701084d9",
+                            Id = "9d1f0a1c-aa0c-48e0-a25d-7cb6c47d8104",
+                            ConcurrencyStamp = "e75c7a5e-6462-4205-b096-5ac62de22109",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "c9c6ae40-6480-404e-ba62-6c59fe99b92d",
-                            ConcurrencyStamp = "f8f15930-3b10-4040-8d58-de7934f6bf95",
+                            Id = "543507fa-10be-45f2-bb4f-5035305719ca",
+                            ConcurrencyStamp = "939165fc-47b2-4fcd-93bd-498f0669db27",
                             Name = "Moderator",
                             NormalizedName = "MODERATOR"
                         });
@@ -479,6 +504,19 @@ namespace ElectronicLibrary.Infrastructure.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ElectronicLibrary.Domain.Core.Library.Log", b =>
+                {
+                    b.HasOne("ElectronicLibrary.Domain.Core.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ElectronicLibrary.Domain.Core.Identity.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
