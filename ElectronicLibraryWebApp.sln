@@ -32,9 +32,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElectronicLibrary.Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElectronicLibrary.Infrastructure.Business.UnitTests", "ElectronicLibrary.Infrastructure.Business.UnitTests\ElectronicLibrary.Infrastructure.Business.UnitTests.csproj", "{DBA39401-9B0C-476E-AB95-5E33FC34E02F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectronicLibrary.Services.ImageService", "ElectronicLibrary.Services.ImageSaver\ElectronicLibrary.Services.ImageService.csproj", "{06B23A58-E6F6-4862-8B38-7CB3F023F6CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElectronicLibrary.Services.ImageService", "ElectronicLibrary.Services.ImageSaver\ElectronicLibrary.Services.ImageService.csproj", "{06B23A58-E6F6-4862-8B38-7CB3F023F6CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectricLibrary.Services.ImageService.UnitTests", "ElectricLibrary.Services.ImageService.UnitTests\ElectricLibrary.Services.ImageService.UnitTests.csproj", "{2854388E-4221-4201-B326-7BA8AE5F58AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElectricLibrary.Services.ImageService.UnitTests", "ElectricLibrary.Services.ImageService.UnitTests\ElectricLibrary.Services.ImageService.UnitTests.csproj", "{2854388E-4221-4201-B326-7BA8AE5F58AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectronicLibrary.Services.MailService", "ElectronicLibrary.Services.MailService\ElectronicLibrary.Services.MailService.csproj", "{5D07199C-EDF9-432B-900C-0F13BA48A939}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,6 +88,10 @@ Global
 		{2854388E-4221-4201-B326-7BA8AE5F58AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2854388E-4221-4201-B326-7BA8AE5F58AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2854388E-4221-4201-B326-7BA8AE5F58AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D07199C-EDF9-432B-900C-0F13BA48A939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D07199C-EDF9-432B-900C-0F13BA48A939}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D07199C-EDF9-432B-900C-0F13BA48A939}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D07199C-EDF9-432B-900C-0F13BA48A939}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +108,7 @@ Global
 		{DBA39401-9B0C-476E-AB95-5E33FC34E02F} = {58092CBA-66B4-431D-B9A5-19F68FAD7230}
 		{06B23A58-E6F6-4862-8B38-7CB3F023F6CA} = {CBEFF9CF-F8DA-4D33-BFC7-E5779091A96D}
 		{2854388E-4221-4201-B326-7BA8AE5F58AD} = {CBEFF9CF-F8DA-4D33-BFC7-E5779091A96D}
+		{5D07199C-EDF9-432B-900C-0F13BA48A939} = {CBEFF9CF-F8DA-4D33-BFC7-E5779091A96D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3BCBCE1-3CDA-4F3C-8E40-3EFE793F9728}
