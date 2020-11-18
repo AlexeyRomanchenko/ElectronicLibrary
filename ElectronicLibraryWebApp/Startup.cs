@@ -1,4 +1,5 @@
 using ElectronicLibraryWebApp.Extensions;
+using ElectronicLibraryWebApp.Jobs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
@@ -6,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Quartz;
+using System;
 using System.Threading;
 
 namespace ElectronicLibraryWebApp
@@ -33,6 +35,12 @@ namespace ElectronicLibraryWebApp
                 {
                    
                 });
+                q.ScheduleJob<BookingCheckJob>(trigger => trigger
+               .WithIdentity("Combined Configuration Trigger")
+               .StartAt(DateBuilder.EvenSecondDate(DateTime.Now))
+               .WithDailyTimeIntervalSchedule(x => x.WithInterval(1, IntervalUnit.Day))
+               .WithDescription("my awesome trigger configured for a job with single call")
+       );
 
 
             });
