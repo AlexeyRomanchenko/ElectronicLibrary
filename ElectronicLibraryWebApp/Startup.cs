@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Quartz;
 using System.Threading;
 
 namespace ElectronicLibraryWebApp
@@ -25,6 +26,22 @@ namespace ElectronicLibraryWebApp
             services.AddDependencies();
             services.AddAuth();
             services.AddSwaggerGen();
+            services.AddQuartz(q =>
+            {
+                q.SchedulerId = "BookingScheduler";
+                q.UseMicrosoftDependencyInjectionJobFactory(options =>
+                {
+                   
+                });
+
+
+            });
+            services.AddQuartzServer(options =>
+            {
+                // when shutting down we want jobs to complete gracefully
+                options.WaitForJobsToComplete = true;
+            });
+
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
