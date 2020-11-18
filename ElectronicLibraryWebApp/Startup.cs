@@ -20,35 +20,13 @@ namespace ElectronicLibraryWebApp
         }
 
         public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
             services.AddDependencies();
             services.AddAuth();
             services.AddSwaggerGen();
-            services.AddQuartz(q =>
-            {
-                q.SchedulerId = "BookingScheduler";
-                q.UseMicrosoftDependencyInjectionJobFactory(options =>
-                {
-                   
-                });
-                q.ScheduleJob<BookingCheckJob>(trigger => trigger
-               .WithIdentity("Combined Configuration Trigger")
-               .StartAt(DateBuilder.EvenSecondDate(DateTime.Now))
-               .WithDailyTimeIntervalSchedule(x => x.WithInterval(1, IntervalUnit.Day))
-               .WithDescription("my awesome trigger configured for a job with single call")
-       );
-
-
-            });
-            services.AddQuartzServer(options =>
-            {
-                // when shutting down we want jobs to complete gracefully
-                options.WaitForJobsToComplete = true;
-            });
+            services.AddJobs();
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

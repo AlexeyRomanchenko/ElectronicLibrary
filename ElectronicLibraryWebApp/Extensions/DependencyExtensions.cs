@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using ElectronicLibrary.Infrastructure.Business;
 using Microsoft.EntityFrameworkCore;
 using ElectronicLibrary.Services;
+using ElectronicLibrary.Services.Email;
+using ElectronicLibraryWebApp.Jobs;
 
 namespace ElectronicLibraryWebApp.Extensions
 {
@@ -32,7 +34,8 @@ namespace ElectronicLibraryWebApp.Extensions
                 .AddDefaultTokenProviders();
 
             services.AddTransient<IImageService, ImageService>();
-            
+            services.AddTransient<BookingCheckJob>();
+
             services.AddTransient<IBookRepository<Book>, BookRepository>();
             services.AddTransient<IBookingRepository<Booking>, BookingRepository>();
             services.AddTransient<ICommentRepository<Comment>, CommentsRepository>();
@@ -41,6 +44,7 @@ namespace ElectronicLibraryWebApp.Extensions
 
             services.AddTransient<IBookingManager, BookingManager>();
             services.AddTransient<IBookManager, BookManager>();
+            services.AddSingleton<IEmailService, EmailService>();
 
         }
     }

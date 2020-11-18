@@ -116,5 +116,17 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                 throw;
             }
         }
+
+        public async Task CheckExpiredBookingsAsync()
+        {
+            try
+            {
+                System.Diagnostics.Debug.WriteLine($"{DateTime.Now}");
+            }
+            catch (Exception)
+            {
+            
+            }
+        }
     }
 }

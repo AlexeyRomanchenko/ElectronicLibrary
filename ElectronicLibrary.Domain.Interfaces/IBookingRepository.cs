@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace ElectronicLibrary.Domain.Interfaces
 {
@@ -7,5 +6,6 @@ namespace ElectronicLibrary.Domain.Interfaces
     {
         int GetUnavailableBookingsById(int id);
         Task<T> GetBookedItemByIdAsync(int id);
+        Task CheckExpiredBookingsAsync();
     }
 }

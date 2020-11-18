@@ -1,11 +1,12 @@
-﻿using MailKit.Net.Smtp;
+﻿using ElectronicLibrary.Services.Interfaces;
+using MailKit.Net.Smtp;
 using MimeKit;
 using System;
 using System.Threading.Tasks;
 
-namespace ElectronicLibrary.Services.MailService
+namespace ElectronicLibrary.Services.Email
 {
-    public class EmailSender
+    public class EmailService: IEmailService
     {
         public async Task SendAsync(string email, string subject, string message)
         {

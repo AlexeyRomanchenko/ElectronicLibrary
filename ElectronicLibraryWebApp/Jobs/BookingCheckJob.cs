@@ -1,4 +1,7 @@
-﻿using Quartz;
+﻿using ElectronicLibrary.Domain.Core.Library;
+using ElectronicLibrary.Domain.Interfaces;
+using ElectronicLibrary.Services.Interfaces;
+using Quartz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +11,14 @@ namespace ElectronicLibraryWebApp.Jobs
 {
     public class BookingCheckJob : IJob
     {
-        public Task Execute(IJobExecutionContext context)
+        private IBookingRepository<Booking> _repository;
+        public BookingCheckJob(IBookingRepository<Booking> repository)
         {
-            throw new NotImplementedException();
+            _repository = repository;
+        }
+        public async Task Execute(IJobExecutionContext context)
+        {
+            await _repository.CheckExpiredBookingsAsync();
         }
     }
 }

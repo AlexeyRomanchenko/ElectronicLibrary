@@ -8,4 +8,8 @@
     <PackageReference Include="MailKit" Version="2.9.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EletronicLibrary.Services.Interfaces\ElectronicLibrary.Services.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>
