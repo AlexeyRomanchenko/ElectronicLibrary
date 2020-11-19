@@ -121,7 +121,6 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
         {
             try
             {
-                System.Diagnostics.Debug.WriteLine($"{DateTime.Now}");
                 return await _context.Database.ExecuteSqlRawAsync("exec RemoveIssuedBookings");
             }
             catch (Exception)

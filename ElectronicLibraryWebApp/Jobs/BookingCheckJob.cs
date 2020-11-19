@@ -18,7 +18,8 @@ namespace ElectronicLibraryWebApp.Jobs
         }
         public async Task Execute(IJobExecutionContext context)
         {
-            await _repository.CheckExpiredBookingsAsync();
+            int rowsChanged = await _repository.CheckExpiredBookingsAsync();
+            System.Diagnostics.Debug.WriteLine($"{rowsChanged} rows changed {DateTime.Now}");
         }
     }
 }
