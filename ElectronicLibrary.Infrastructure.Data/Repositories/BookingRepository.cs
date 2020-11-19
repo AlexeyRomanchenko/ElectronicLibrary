@@ -117,15 +117,16 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
             }
         }
 
-        public async Task CheckExpiredBookingsAsync()
+        public async Task<int> CheckExpiredBookingsAsync()
         {
             try
             {
                 System.Diagnostics.Debug.WriteLine($"{DateTime.Now}");
+                return await _context.Database.ExecuteSqlRawAsync("exec RemoveIssuedBookings");
             }
             catch (Exception)
             {
-            
+                throw;
             }
         }
     }

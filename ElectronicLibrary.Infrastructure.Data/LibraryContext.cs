@@ -49,15 +49,19 @@ namespace ElectronicLibrary.Infrastructure.Data
                 b.HasKey(i => new { i.UserId, i.RoleId });
             });
             modelBuilder.Entity<Genre>().HasKey(e => e.Id);
-           
+            //if(modelBuilde)
             modelBuilder.Entity<IdentityRole>().HasData(
                 new IdentityRole
                 {
+                    Id = "9698a61d-ac44-41f7-baea-282a6a706fd3",
+                    ConcurrencyStamp = "d72a4008-ac11-485b-bbb0-f261592a20ed",
                     Name = "User",
                     NormalizedName = "USER"
                 },
                  new IdentityRole
                  {
+                     Id = "2d29ad54-7b0f-436b-a49c-f45be0c7d7ee",
+                     ConcurrencyStamp = "a710351c-e035-46c5-8fe3-60e40121a460",
                      Name = "Moderator",
                      NormalizedName = "MODERATOR"
                  }

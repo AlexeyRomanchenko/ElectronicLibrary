@@ -6,6 +6,6 @@ namespace ElectronicLibrary.Domain.Interfaces
     {
         int GetUnavailableBookingsById(int id);
         Task<T> GetBookedItemByIdAsync(int id);
-        Task CheckExpiredBookingsAsync();
+        Task<int> CheckExpiredBookingsAsync();
     }
 }
