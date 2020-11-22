@@ -29,6 +29,7 @@ namespace ElectronicLibraryWebApp.Jobs
                 string _message = $"Hello, you took a book {notification.Book} in {notification.BookingDate} in our library, please return it";
                 string _subject = $"Library notification about book {notification.Book}";
                 await _emailService.SendAsync(notification.Email, _subject, _message);
+                await _repository.SetBookingAsNotifiedAsync(notification.BookingId);
             }
         }
     }

@@ -163,5 +163,24 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
             }
            
         }
+
+        public async Task SetBookingAsNotifiedAsync(int bookingId)
+        {
+            try
+            {
+                if (bookingId > 0)
+                {
+                    await _context.Database.ExecuteSqlInterpolatedAsync($"exec SetBookingAsNotified {bookingId}");
+                }
+                else
+                {
+                    throw new ArgumentNullException("Booking is not valid");
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

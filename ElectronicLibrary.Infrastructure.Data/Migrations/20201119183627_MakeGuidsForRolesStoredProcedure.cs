@@ -66,6 +66,7 @@ END
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.Sql("DROP PROCEDURE IF EXISTS dbo.RemoveIssuedBookings");
             migrationBuilder.DeleteData(
                 table: "Roles",
                 keyColumn: "Id",

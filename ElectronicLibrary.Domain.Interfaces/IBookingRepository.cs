@@ -11,5 +11,6 @@ namespace ElectronicLibrary.Domain.Interfaces
         Task<T> GetBookedItemByIdAsync(int id);
         Task<int> CheckExpiredBookingsAsync();
         Task<IEnumerable<BookingNotification>> GetExpiredUserEmailsAsync();
+        Task SetBookingAsNotifiedAsync(int bookingId);
     }
 }
