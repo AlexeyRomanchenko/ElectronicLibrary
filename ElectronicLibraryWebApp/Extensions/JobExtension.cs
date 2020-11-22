@@ -30,6 +30,11 @@ namespace ElectronicLibraryWebApp.Extensions
                     .StartAt(DateBuilder.EvenSecondDate(DateTimeOffset.UtcNow))
                     .WithDailyTimeIntervalSchedule(x => x.WithInterval(10, IntervalUnit.Second))
                 );
+                q.ScheduleJob<ExpiredNotificationJob>(trigger => trigger
+                   .WithIdentity("Notification users with expired terms")
+                   .StartAt(DateBuilder.EvenSecondDate(DateTimeOffset.UtcNow))
+                   .WithDailyTimeIntervalSchedule(x => x.WithInterval(50, IntervalUnit.Second))
+               );
 
 
             });

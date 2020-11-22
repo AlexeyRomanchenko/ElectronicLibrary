@@ -3,8 +3,9 @@
     public enum Status
     {
         Booking = 1,
-        Busy = 2,
-        Cancelled = 3,
-        Finished = 4
+        Cancelled = 2,
+        Busy = 3,
+        Notified = 4,
+        Finished = 5
     }
 }
