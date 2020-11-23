@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid x:Name="LayoutRoot" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <DataGrid x:Name="economicsGrid" AutoGenerateColumns="True"  Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="3">
+              
+            </DataGrid>
 
+            <Button Grid.Column="3" Grid.Row="4" Click="Button_Click">CLEAR</Button>
+
+        </Grid>
     </Grid>
 </Window>
