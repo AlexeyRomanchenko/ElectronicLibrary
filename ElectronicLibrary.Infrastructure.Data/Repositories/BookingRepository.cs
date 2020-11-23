@@ -1,10 +1,11 @@
 ﻿using ElectronicLibrary.Domain.Core.Library;
 using ElectronicLibrary.Domain.Interfaces;
+using ElectronicLibrary.Services.Models;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ElectronicLibrary.Infrastructure.Data.Repositories
@@ -110,6 +111,71 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
             catch (InvalidOperationException)
             {
                 throw new InvalidOperationException("There was an error with finding your booking"); 
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task<int> CheckExpiredBookingsAsync()
+        {
+            try
+            {
+                return await _context.Database.ExecuteSqlRawAsync("exec RemoveIssuedBookings");
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task<IEnumerable<BookingNotification>> GetExpiredUserEmailsAsync()
+        {
+            try
+            {
+                List<BookingNotification> notifications = new List<BookingNotification>();
+                using (SqlConnection connection = new SqlConnection(_context.Database.GetDbConnection().ConnectionString))
+                {
+                    await connection.OpenAsync();
+                    using (SqlCommand command = new SqlCommand("SELECT * from GetUsersWithExpiredBusyStatus()", connection))
+                    {
+                        using (SqlDataReader reader = await command.ExecuteReaderAsync(System.Data.CommandBehavior.CloseConnection))
+                        {
+                            while (reader.Read())
+                            {
+                                notifications.Add(new BookingNotification
+                                {
+                                     Email = reader.GetString(reader.GetOrdinal("Email")),
+                                     Book = reader.GetString(reader.GetOrdinal("Book")),
+                                     BookingId = reader.GetInt32(reader.GetOrdinal("BookingId")),
+                                     BookingDate = reader.GetDateTime(reader.GetOrdinal("BookingDate")),
+                                });
+                            }
+                        }
+                    }
+                }
+                return notifications;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+           
+        }
+
+        public async Task SetBookingAsNotifiedAsync(int bookingId)
+        {
+            try
+            {
+                if (bookingId > 0)
+                {
+                    await _context.Database.ExecuteSqlInterpolatedAsync($"exec SetBookingAsNotified {bookingId}");
+                }
+                else
+                {
+                    throw new ArgumentNullException("Booking is not valid");
+                }
             }
             catch (Exception)
             {

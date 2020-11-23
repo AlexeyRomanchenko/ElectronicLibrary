@@ -17,6 +17,8 @@
     <Compile Remove="Migrations\20201101160134_ChangeGenreTypeAddSeed.Designer.cs" />
     <Compile Remove="Migrations\20201103165113_addRolesSeed.cs" />
     <Compile Remove="Migrations\20201103165113_addRolesSeed.Designer.cs" />
+    <Compile Remove="Migrations\20201119184006_test.cs" />
+    <Compile Remove="Migrations\20201119184006_test.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +34,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ElectronicLibrary.Domain.Core\ElectronicLibrary.Domain.Core.csproj" />
     <ProjectReference Include="..\ElectronicLibrary.Domain.Interfaces\ElectronicLibrary.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\ElectronicLibrary.Services.Models\ElectronicLibrary.Services.Models.csproj" />
   </ItemGroup>
 
 </Project>

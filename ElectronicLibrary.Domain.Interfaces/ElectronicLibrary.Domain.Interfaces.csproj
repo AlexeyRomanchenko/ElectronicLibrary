@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ElectronicLibrary.Domain.Core\ElectronicLibrary.Domain.Core.csproj" />
+    <ProjectReference Include="..\ElectronicLibrary.Services.Models\ElectronicLibrary.Services.Models.csproj" />
   </ItemGroup>
 
 </Project>

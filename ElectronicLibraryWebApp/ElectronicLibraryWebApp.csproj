@@ -12,6 +12,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.9" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.7" />
+    <PackageReference Include="Quartz" Version="3.2.3" />
+    <PackageReference Include="Quartz.AspNetCore" Version="3.2.3" />
+    <PackageReference Include="Quartz.Extensions.DependencyInjection" Version="3.2.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
@@ -31,6 +34,7 @@
     <ProjectReference Include="..\ElectronicLibrary.Infrastructure.Business\ElectronicLibrary.Infrastructure.Business.csproj" />
     <ProjectReference Include="..\ElectronicLibrary.Infrastructure.Data\ElectronicLibrary.Infrastructure.Data.csproj" />
     <ProjectReference Include="..\ElectronicLibrary.Services.ImageSaver\ElectronicLibrary.Services.ImageService.csproj" />
+    <ProjectReference Include="..\ElectronicLibrary.Services.MailService\ElectronicLibrary.Services.MailService.csproj" />
     <ProjectReference Include="..\EletronicLibrary.Services.Interfaces\ElectronicLibrary.Services.Interfaces.csproj" />
   </ItemGroup>
 
