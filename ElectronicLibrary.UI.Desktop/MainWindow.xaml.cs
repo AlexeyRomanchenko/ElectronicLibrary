@@ -1,5 +1,6 @@
 ﻿using ElectronicLibrary.UI.Desktop.ViewModels;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -32,23 +33,25 @@ namespace ElectronicLibrary.UI.Desktop
         {
             var loadBusinessTask = Task.Run(()=> {
                 System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
-                Thread.Sleep(2000);
+                Thread.Sleep(5000);
                 var businessData = File.ReadAllLines($"{Environment.CurrentDirectory}\\Store\\business.csv");
-                System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
+                System.Diagnostics.Debug.WriteLine("Business " + DateTime.Now.ToString());
                 return businessData;
             });
             var loadFinancialTask = Task.Run(()=> 
             {
                 System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
-                Thread.Sleep(2000);
+                Thread.Sleep(5000);
                 var financies = File.ReadAllLines($"{Environment.CurrentDirectory}\\Store\\financial.csv");
-                System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
+                System.Diagnostics.Debug.WriteLine("Financial " + DateTime.Now.ToString());
                 return financies;
             });
             //, TaskContinuationOptions.OnlyOnRanToCompletion
-
-            List<BusinessViewModel> businesses = new List<BusinessViewModel>();
-                foreach (string businessInfo in loadBusinessTask.Result.Skip(1))
+            loadBusinessTask.ContinueWith(task => 
+            {
+                // ConcurrentBag is a thread safe option of list
+                var businesses = new ConcurrentBag<BusinessViewModel>();
+                foreach (string businessInfo in task.Result.Skip(1))
                 {
                     var data = businessInfo.Split(',');
                     var businessViewModel = new BusinessViewModel
@@ -59,12 +62,14 @@ namespace ElectronicLibrary.UI.Desktop
                     };
                     businesses.Add(businessViewModel);
                 }
-                Dispatcher.Invoke(() => 
+                Dispatcher.Invoke(() =>
                 {
                     economicsGrid.ItemsSource = businesses;
                 });
-
-            System.Diagnostics.Debug.WriteLine("Here I am");
+                System.Diagnostics.Debug.WriteLine("Throwing source " + DateTime.Now.ToString());
+                System.Diagnostics.Debug.WriteLine("Here I am");
+            });
+           
         }
     }
 }
