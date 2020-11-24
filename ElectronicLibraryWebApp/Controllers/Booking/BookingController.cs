@@ -1,23 +1,30 @@
 ﻿using System;
 using System.Threading.Tasks;
 using ElectronicLibrary.Domain.Core.Identity;
+using ElectronicLibrary.Domain.Interfaces;
 using ElectronicLibrary.Services.Interfaces;
 using ElectronicLibrary.Services.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-namespace ElectronicLibraryWebApp.Controllers.Booking
+using ElectronicLibrary.Domain.Core.Library;
+
+namespace ElectronicLibraryWebApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class BookingController : ControllerBase
     {
         private IBookingManager _bookingManager;
+        private IBookingRepository<Booking> _repository;
         private UserManager<User> _userManager;
-        public BookingController(IBookingManager bookingManager, UserManager<User> userManager)
+        public BookingController(
+            IBookingManager bookingManager,
+            IBookingRepository<Booking> repository,
+            UserManager<User> userManager)
         {
             _bookingManager = bookingManager;
             _userManager = userManager;
+            _repository = repository;
         }
         
         //[Authorize]
@@ -39,6 +46,22 @@ namespace ElectronicLibraryWebApp.Controllers.Booking
             {
                 return BadRequest(ex.Message);
             }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                await _repository.RemoveBookingAsync(id);
+                await _repository.SaveAsync();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
         }
     }
 }

@@ -9,6 +9,7 @@ namespace ElectronicLibrary.Domain.Interfaces
         Task<IEnumerable<T>> GetBlockedAsync();
         Task<T> GetByIdAsync(string id);
         void ChangeUserStatus(T user, bool userStatus);
-        Task<int> SaveAsync();
+        Task<bool> SaveAsync();
+        Task<bool> IsExistsAsync(string username);
     }
 }

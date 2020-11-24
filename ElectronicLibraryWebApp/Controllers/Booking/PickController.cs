@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace ElectronicLibraryWebApp.Controllers.Booking
+namespace ElectronicLibraryWebApp.Controllers
 {
     [Route("api/booking/busy")]
     [ApiController]
@@ -18,27 +18,6 @@ namespace ElectronicLibraryWebApp.Controllers.Booking
         {
             _manager = manager;
         }
-        // GET: api/<PickController>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/<PickController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<PickController>
-        [HttpPost]
-        public IActionResult Post([FromBody] int id)
-        {
-            return BadRequest();
-        }
-
         // PUT api/<PickController>/5
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id)
@@ -60,12 +39,6 @@ namespace ElectronicLibraryWebApp.Controllers.Booking
             {
                 return BadRequest(ex.Message);
             }
-        }
-
-        // DELETE api/<PickController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }
