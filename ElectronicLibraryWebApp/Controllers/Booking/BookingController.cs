@@ -26,6 +26,19 @@ namespace ElectronicLibraryWebApp.Controllers
             _userManager = userManager;
             _repository = repository;
         }
+
+        public async Task<IActionResult> Get()
+        {
+            try
+            {
+                var bookings = await _repository.GetAllAsync();
+                return Ok(bookings);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
         
         //[Authorize]
         [HttpPost]

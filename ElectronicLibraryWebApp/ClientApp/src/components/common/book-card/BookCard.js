@@ -29,11 +29,6 @@ export const BookCard = ({book}) => {
           Release year: 2016
         </Typography>
         </CardContent>
-      <CardActions>
-        <Button size="small" variant="outlined" color="primary">
-          Rezerve
-        </Button>
-      </CardActions>
     </Card>
   );
 }

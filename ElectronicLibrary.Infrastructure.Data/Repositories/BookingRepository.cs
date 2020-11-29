@@ -36,7 +36,10 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
         {
             try
             {
-                return await _context.Bookings.AsNoTracking().ToListAsync();
+                return await _context.Bookings
+                    .Include(b=>b.Book)
+                    .Include(u=>u.User)
+                    .AsNoTracking().ToListAsync();
             }
             catch (Exception)
             {
