@@ -83,5 +83,17 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                 throw;
             }
         }
+
+        public async Task<IEnumerable<User>> GetAsync()
+        {
+            try
+            {
+                return await _context.Users.AsNoTracking().ToListAsync();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }
