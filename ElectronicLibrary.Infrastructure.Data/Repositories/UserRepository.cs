@@ -55,8 +55,45 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
 
         public void ChangeUserStatus(User user, bool userStatus)
         {
-            user.IsBlocked = userStatus;
-            _context.Entry(user).State = EntityState.Modified;
+            try
+            {
+                if (user is null)
+                {
+                    throw new ArgumentException("User is not valid");
+                }
+                user.IsBlocked = userStatus;
+                _context.Entry(user).State = EntityState.Modified;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+           
+        }
+
+        public async Task<bool> IsExistsAsync(string username)
+        {
+            try
+            {
+                var user = await _context.Users.Where(e => e.UserName == username).FirstOrDefaultAsync();
+                return !(user is null); 
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task<IEnumerable<User>> GetAsync()
+        {
+            try
+            {
+                return await _context.Users.AsNoTracking().ToListAsync();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

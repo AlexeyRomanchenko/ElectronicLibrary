@@ -1,12 +1,11 @@
 import {Header} from './components/Header';
-import {BookPage, Home, SignIn, SignUp} from './pages';
+import {BookPage, Dashboard, Home, SignIn, SignUp} from './pages';
 import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import { CreateBook } from './pages/Dashboard/Books/Create/CreateBook';
 
 const App = () => {
   return (<Router>
@@ -16,7 +15,7 @@ const App = () => {
             <SignIn />
           </Route>
           <Route path="/dashboard">
-            <CreateBook />
+            <Dashboard />
           </Route>
           <Route path="/signup">
             <SignUp />

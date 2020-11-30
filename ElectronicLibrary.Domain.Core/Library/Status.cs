@@ -1,5 +1,8 @@
-﻿namespace ElectronicLibrary.Domain.Core.Library
+﻿using System.Text.Json.Serialization;
+
+namespace ElectronicLibrary.Domain.Core.Library
 {
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum Status
     {
         Booking = 1,

@@ -90,17 +90,5 @@ namespace ElectronicLibraryWebApp.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
-        // PUT api/<BookController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<BookController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

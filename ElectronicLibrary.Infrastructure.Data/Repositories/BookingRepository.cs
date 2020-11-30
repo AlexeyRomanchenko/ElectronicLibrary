@@ -32,19 +32,20 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                 throw;
             }
         }
-
         public async Task<IEnumerable<Booking>> GetAllAsync()
         {
             try
             {
-                return await _context.Bookings.AsNoTracking().ToListAsync();
+                return await _context.Bookings
+                    .Include(b=>b.Book)
+                    .Include(u=>u.User)
+                    .AsNoTracking().ToListAsync();
             }
             catch (Exception)
             {
                 throw;
             }
         }
-
         public Task<Booking> GetByIdAsync(int id)
         {
             try
@@ -63,7 +64,6 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                 throw;
             }
         }
-
         public int GetUnavailableBookingsById(int id)
         {
             try
@@ -79,7 +79,6 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                 throw;
             }
         }
-
         public async Task<bool> SaveAsync()
         {
             try
@@ -91,7 +90,6 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                 throw;
             }
         }
-
         public async Task<Booking> GetBookedItemByIdAsync(int bookingId)
         {
             try
@@ -117,7 +115,6 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                 throw;
             }
         }
-
         public async Task<int> CheckExpiredBookingsAsync()
         {
             try
@@ -129,7 +126,6 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                 throw;
             }
         }
-
         public async Task<IEnumerable<BookingNotification>> GetExpiredUserEmailsAsync()
         {
             try
@@ -163,7 +159,6 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
             }
            
         }
-
         public async Task SetBookingAsNotifiedAsync(int bookingId)
         {
             try
@@ -176,6 +171,18 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                 {
                     throw new ArgumentNullException("Booking is not valid");
                 }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public async Task RemoveBookingAsync(int id)
+        {
+            try
+            {
+               Booking booking = await _context.Bookings.Where(b => b.Id == id).FirstOrDefaultAsync();
+               booking.Status = Status.Cancelled;
             }
             catch (Exception)
             {

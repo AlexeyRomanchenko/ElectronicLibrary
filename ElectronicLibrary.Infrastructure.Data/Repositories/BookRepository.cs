@@ -19,7 +19,6 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
         {
            await _context.Books.AddAsync(book);
         }
-
         public async Task<IEnumerable<Book>> GetAllAsync()
         {
             try
@@ -35,7 +34,6 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                 throw;
             }          
         }
-
         public async Task<int> GetAmountByIdAsync(int id)
         {
             try
@@ -47,7 +45,6 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                 throw;
             }
         }
-
         public async Task<Book> GetByIdAsync(int id)
         {
             try
@@ -64,7 +61,6 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                 throw;
             }
         }
-
         public async Task<bool> SaveAsync()
         {
             try
@@ -76,7 +72,6 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                 throw;
             }
         }
-
         public async Task<IEnumerable<Book>> GetBooksByKeyNameAsync(string keyWord)
         {
             try
