@@ -11,6 +11,7 @@ import { BookList } from './Books/BookLIst';
 import styles from './Dashboard.module.css';
 import { BookingList } from './Bookings';
 import { UserList } from './Users';
+import { Logs } from './Logs';
 
 export const Dashboard = () => {
     let { path } = useRouteMatch();
@@ -32,6 +33,9 @@ export const Dashboard = () => {
         </Route>
         <Route exact={true} path={`${path}/users`}>
           <UserList />
+        </Route>
+        <Route exact={true} path={`${path}/logs`}>
+         <Logs />
         </Route>
       </Switch>
     </div>

@@ -21,19 +21,26 @@ export const BottomNav = ({path}) => {
         }}
         showLabels
       >
-        <BottomNavigationAction
+
+            <BottomNavigationAction
         component={Link}
         to={`${path}/books`}
         label="Books" icon={<BookIcon />} />
-        <BottomNavigationAction
+
+            <BottomNavigationAction
         component={Link}
         to={`${path}/bookings`}
         label="Bookings" icon={<ShopIcon />} />
-        <BottomNavigationAction
+
+            <BottomNavigationAction
         component={Link}
         to={`${path}/users`}
         label="Users" icon={<AccountCircleIcon />} />
-        <BottomNavigationAction label="Logs" icon={<EventIcon />} />
+
+            <BottomNavigationAction
+        component={Link}
+        to={`${path}/logs`}
+        label="Logs" icon={<EventIcon />} />
       </BottomNavigation>
     );
 }
