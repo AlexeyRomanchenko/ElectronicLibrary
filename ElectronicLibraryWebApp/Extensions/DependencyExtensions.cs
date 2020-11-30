@@ -42,6 +42,7 @@ namespace ElectronicLibraryWebApp.Extensions
             services.AddTransient<IRepository<Author>, AuthorRepository>();
             services.AddTransient<IRepository<Genre>, GenreRepository>();
             services.AddTransient<IUserRepository<User>, UserRepository>();
+            services.AddTransient<ILoggerRepository<Log>, LoggerRepository>();
 
             services.AddTransient<IBookingManager, BookingManager>();
             services.AddTransient<IBookManager, BookManager>();

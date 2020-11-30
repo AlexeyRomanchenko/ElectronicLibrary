@@ -1,4 +1,5 @@
-﻿import React from 'react';
+﻿import React, { useEffect ,useState} from 'react';
+import axios from 'axios';
 import { Grid } from '../../../components/common/grid';
 
 const columns = [
@@ -15,8 +16,18 @@ const columns = [
 ];
 
 export const Logs = () => {
+    const [logs, setLogs] = useState([]);
+    useEffect(() => {
+        axios.get('/api/logger').then(response => {
+            if (response.status === 200) {
+                setLogs(response.data);
+            }
+        });
+    }, []);
     return (
-        <p>System logs</p>
-        <Grid columns={columns} data={[]}/>
+        <>
+            <p>System logs</p>
+            <Grid columns={columns} data={logs} />
+        </>
         );
 }
