@@ -11,24 +11,24 @@ namespace ElectronicLibrary.Infrastructure.Tests
 {
     public class BookingShould
     {
-        [Fact]
-        public async Task ToBeCreated()
-        {
-            var sb = new SqliteConnectionStringBuilder { DataSource = ":memory:" };
-            var connection = new SqliteConnection(sb.ToString());
-            var options = new DbContextOptionsBuilder<LibraryContext>()
-                .UseSqlite(connection)
-                .Options;
+        //[Fact]
+        //public async Task ToBeCreated()
+        //{
+        //    var sb = new SqliteConnectionStringBuilder { DataSource = ":memory:" };
+        //    var connection = new SqliteConnection(sb.ToString());
+        //    var options = new DbContextOptionsBuilder<LibraryContext>()
+        //        .UseSqlite(connection)
+        //        .Options;
 
-            using (LibraryContext context = new LibraryContext(options))
-            {
-                await context.Database.OpenConnectionAsync();
-                context.Database.EnsureCreated();
+        //    using (LibraryContext context = new LibraryContext(options))
+        //    {
+        //        await context.Database.OpenConnectionAsync();
+        //        context.Database.EnsureCreated();
 
-                var repository = new BookingRepository(context);
-                var rowsChanged = await repository.CheckExpiredBookingsAsync();
-                Assert.NotEqual(-1, rowsChanged);
-            }
-        }
+        //        var repository = new BookingRepository(context);
+        //        var rowsChanged = await repository.CheckExpiredBookingsAsync();
+        //        Assert.NotEqual(-1, rowsChanged);
+        //    }
+        //}
     }
 }
