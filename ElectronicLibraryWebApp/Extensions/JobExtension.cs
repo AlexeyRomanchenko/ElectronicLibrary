@@ -33,7 +33,7 @@ namespace ElectronicLibraryWebApp.Extensions
                 q.ScheduleJob<ExpiredNotificationJob>(trigger => trigger
                    .WithIdentity("Notification users with expired terms")
                    .StartAt(DateBuilder.EvenSecondDate(DateTimeOffset.UtcNow))
-                   .WithDailyTimeIntervalSchedule(x => x.WithInterval(50, IntervalUnit.Second))
+                   .WithDailyTimeIntervalSchedule(x => x.WithInterval(24, IntervalUnit.Hour))
                );
 
 
