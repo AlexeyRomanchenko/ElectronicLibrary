@@ -52,22 +52,22 @@ namespace ElectronicLibrary.Infrastructure.Tests
             }
         }
 
-        [Theory]
-        [InlineData("net")]
-        public async Task ToBeReturnedByKeywords(string key)
-        {
-            var connection = "Server=(localdb)\\mssqllocaldb;Database=ElectricLibrary;Trusted_Connection=True;MultipleActiveResultSets=true";
-            var options = new DbContextOptionsBuilder<LibraryContext>()
-                .UseSqlServer(connection)
-                .Options;
-            using (LibraryContext context = new LibraryContext(options))
-            {
-                var repository = new BookRepository(context);
-                var books = await repository.GetBooksByKeyNameAsync(key);
+        //[Theory]
+        //[InlineData("net")]
+        //public async Task ToBeReturnedByKeywords(string key)
+        //{
+        //    var connection = "Server=(localdb)\\mssqllocaldb;Database=ElectricLibrary;Trusted_Connection=True;MultipleActiveResultSets=true";
+        //    var options = new DbContextOptionsBuilder<LibraryContext>()
+        //        .UseSqlServer(connection)
+        //        .Options;
+        //    using (LibraryContext context = new LibraryContext(options))
+        //    {
+        //        var repository = new BookRepository(context);
+        //        var books = await repository.GetBooksByKeyNameAsync(key);
 
-                Assert.NotNull(books);
-                Assert.NotEmpty(books);
-            }
-        }
+        //        Assert.NotNull(books);
+        //        Assert.NotEmpty(books);
+        //    }
+        //}
     }
 }
