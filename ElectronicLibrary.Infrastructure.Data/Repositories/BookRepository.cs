@@ -84,7 +84,7 @@ namespace ElectronicLibrary.Infrastructure.Data.Repositories
                                                    $"LIKE '%{keyWord}%'").AsNoTracking().ToListAsync();
                 return books;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }
