@@ -15,11 +15,11 @@ namespace ElectronicLibraryWebApp.Controllers
     {
         private IBookRepository<Book> _bookRepository;
         private IImageService _imageService;
-        private IHostingEnvironment _env;
+        private IWebHostEnvironment _env;
         public BookController(
             IBookRepository<Book> bookRepository,
             IImageService imageService,
-            IHostingEnvironment env
+            IWebHostEnvironment env
             )
         {
             _bookRepository = bookRepository;
